@@ -9,6 +9,9 @@
 - 求和
 - 求积
 - 对数（的基础概念和运算）和e
+- 函数的基本定义
+
+我会在依赖以上知识点的情况下完善机器学习所需要的数学。
 
 ## 导数
 
@@ -26,7 +29,7 @@ $$
 \log{x^y}=y\log{x} \\
 e^{\ln m} = m\\
 \log{(xy)} = \log x + \log y\\
-\log{\frac{x}{y}} = \log x + \log y\\
+\log{\frac{x}{y}} = \log x - \log y\\
 \ln e = 1\\
 \log \prod f = \sum \log f
 $$
