@@ -17,10 +17,15 @@ jobs:
     
     - name: Install Dependency
       run: |
-        cargo install mdbook
-        cargo install mdbook-katex
+        mkdir dep
+        cd dep
+        wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
+        wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
+        cd ..
     - name: Build book
-      run: mdbook build --dest-dir out
+      run: |
+        export PATH="$(pwd)/dep:$PATH"
+        mdbook build --dest-dir out
 
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
