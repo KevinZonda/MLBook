@@ -17,8 +17,8 @@ jobs:
     
     - name: Install Dependency
       run: |
-        - cargo install mdbook
-        - cargo install mdbook-katex
+        cargo install mdbook
+        cargo install mdbook-katex
     - name: Build book
       run: mdbook build --dest-dir out
 
