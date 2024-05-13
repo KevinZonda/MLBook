@@ -1,0 +1,31 @@
+name: Rust
+
+on:
+  push:
+    branches: [ "master" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Dependency
+      run: |
+        - cargo install mdbook
+        - cargo install mdbook-katex
+    - name: Build book
+      run: mdbook build --dest-dir out
+
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: gh-pages
+        BRANCH: gh-pages
+        FOLDER: out
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
