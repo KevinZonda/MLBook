@@ -21,7 +21,7 @@ jobs:
         cd dep
         wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
         wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
-        chmox +x *
+        chmod +x *
         cd ..
         echo "$(pwd)/dep" >> $GITHUB_PATH
         
