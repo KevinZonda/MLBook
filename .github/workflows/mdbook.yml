@@ -32,7 +32,11 @@ jobs:
     - name: Deploy
       run: |
         cp -r out ..
+        git fetch
+        git pull --force
+        
         git checkout gh-pages
+        git fetch
         git pull --force
         git config user.name KevinZonda
         git config user.email 33132228+KevinZonda@users.noreply.github.com
