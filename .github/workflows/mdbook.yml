@@ -24,7 +24,7 @@ jobs:
         cd ..
     - name: Build book
       run: |
-        export PATH="$(pwd)/dep:$PATH"
+        echo "$(pwd)/dep" >> $GITHUB_PATH
         mdbook build --dest-dir out
 
     - name: Deploy
