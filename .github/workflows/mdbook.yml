@@ -25,7 +25,7 @@ jobs:
     - name: Deploy
       uses: s0/git-publish-subdir-action@develop
       env:
-        REPO: gh-pages
+        REPO: self
         BRANCH: gh-pages
         FOLDER: out
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
