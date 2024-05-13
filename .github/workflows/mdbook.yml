@@ -44,12 +44,6 @@ jobs:
         mv ../out/* .
         git add .
         git commit -m "S.C.: `date "+%Y-%m-%d %H:%M:%S UTC%:z"`" || true
-        echo date
-        
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        branch: gh-pages
+        git push
 
         
