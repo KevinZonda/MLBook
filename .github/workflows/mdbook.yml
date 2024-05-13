@@ -40,7 +40,7 @@ jobs:
         git pull --force
         git config user.name KevinZonda
         git config user.email 33132228+KevinZonda@users.noreply.github.com
-        ls | grep -xv ".git" | xargs rm
+        ls | grep -xv ".git" | xargs rm -fr
         mv out/* .
         git add .
         git commit -m "S.C.: `date "+%Y-%m-%d %H:%M:%S UTC%:z"`" || true
