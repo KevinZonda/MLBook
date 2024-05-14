@@ -28,11 +28,11 @@ jobs:
         
     - name: Build book
       run: |
-        mdbook build --dest-dir out
+        mdbook build --dest-dir ../out
+        touch out/.nojekyll
 
     - name: Deploy
       run: |
-        cp -r out ..
         git fetch
         git pull --force
         
