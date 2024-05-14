@@ -29,7 +29,6 @@ jobs:
     - name: Build book
       run: |
         mdbook build --dest-dir ../out
-        touch ../out/.nojekyll
 
     - name: Deploy
       run: |
@@ -43,6 +42,7 @@ jobs:
         git config user.email 33132228+KevinZonda@users.noreply.github.com
         ls | grep -xv ".git" | xargs rm -fr
         mv ../out/* .
+        echo 1 >> . nojekyll
         git add .
         git commit -m "S.C.: `date "+%Y-%m-%d %H:%M:%S UTC%:z"`" || true
         git push
