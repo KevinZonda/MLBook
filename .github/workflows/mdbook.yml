@@ -43,8 +43,7 @@ jobs:
         ls | grep -xv ".git" | xargs rm -fr
         mv ../out/* .
         echo 1 >> .nojekyll
+        echo mlbook.dev > CNAME
         git add .
         git commit -m "S.C.: `date "+%Y-%m-%d %H:%M:%S UTC%:z"`" || true
         git push
-
-        
