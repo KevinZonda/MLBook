@@ -17,13 +17,14 @@ jobs:
     
     - name: Install Dependency
       run: |
+        cd ..
         mkdir dep
         cd dep
         wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
         wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
         chmod +x *
-        cd ..
-        echo "$(pwd)/dep" >> $GITHUB_PATH
+        echo "$(pwd)" >> $GITHUB_PATH
+        cd ../MLBook
         
     - name: Build book
       run: |
