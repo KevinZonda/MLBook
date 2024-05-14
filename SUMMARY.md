@@ -9,3 +9,4 @@
   - [线性回归](./2-Supervised/2.1-LinearRegression.md)
   - [梯度下降](./2-Supervised/2.2-GD.md)
   - [线性回归与梯度下降](./2-Supervised/2.3-LinearRegressionGD.md)
+  - [逻辑回归](./2-Supervised/2.4-LogisticRegression.md)
