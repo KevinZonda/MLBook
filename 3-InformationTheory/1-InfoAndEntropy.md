@@ -1,4 +1,4 @@
-# 信息与熵
+# 自信息与熵
 
 ## 自信息（Self-Informaiton）
 

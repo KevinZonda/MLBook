@@ -20,7 +20,7 @@
   - [生成对抗网络（GAN）](./4-DeepLearning/4.x-GAN.md)
 
 - [信息论](./3-InformationTheory/README.md)
-  - [信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
+  - [自信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
 - [序列模型](./5-SequenceModel/README.md)
 - [优化](./6-Optimisation/README.md)
 - [学习理论](./7-LearningTheory/README.md)
