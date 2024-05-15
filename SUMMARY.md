@@ -3,7 +3,7 @@
 [前言](README.md)
 [符号表](./Notation.md)
 
-- [机器学习基础](./1-Basic/1.1-Overview.md)
+- [机器学习基础](./1-Basic/README.md)
   - [高中数学回顾](./1-Basic/1.2-MathRecap.md)
 
 - [监督学习](./2-Supervised/README.md)
