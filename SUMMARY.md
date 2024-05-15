@@ -24,6 +24,7 @@
   - [自信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
   - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
 - [序列模型](./5-SequenceModel/README.md)
+  - [循环神经网络 RNN](./5-SequenceModel/5.1-RNN.md)
 - [优化](./6-Optimisation/README.md)
   - [凸函数](./6-Optimisation/6.1-Convex.md)
   - [梯度下降的变种](./6-Optimisation/6.2-GradientDecent.md)
