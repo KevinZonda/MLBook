@@ -12,3 +12,6 @@
   - [线性回归与梯度下降](./2-Supervised/2.3-LinearRegressionGD.md)
   - [逻辑回归](./2-Supervised/2.4-LogisticRegression.md)
   - [非线性变换](./2-Supervised/2.5-NonLinearTransformation.md)
+
+- [深度学习](./4-DeepLearning/)
+  - [生成对抗网络（GAN）](./4-DeepLearning/4.x-GAN.md)
