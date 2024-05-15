@@ -15,8 +15,9 @@
 
 - [深度学习](./4-DeepLearning/README.md)
   - [感知机](./4-DeepLearning/4.1-Perceptron.md)
-  - [多层感知机](./4-DeepLearning/4.2-MLP.md)
+  - [多层感知机（MLP）](./4-DeepLearning/4.2-MLP.md)
   - [计算图与反向传播](./4-DeepLearning/4.3-BP.md)
+  - [自编码器（AE）](./4-DeepLearning/4.x-AE.md)
   - [生成对抗网络（GAN）](./4-DeepLearning/4.x-GAN.md)
 
 - [信息论](./3-InformationTheory/README.md)
