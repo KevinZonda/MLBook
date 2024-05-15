@@ -1,6 +1,6 @@
 # Summary
 
-[前言](README.md)
+[封面](README.md)
 [符号表](./Notation.md)
 
 - [机器学习基础](./1-Basic/README.md)
@@ -14,4 +14,7 @@
   - [非线性变换](./2-Supervised/2.5-NonLinearTransformation.md)
 
 - [深度学习](./4-DeepLearning/README.md)
+  - [感知机](./4-DeepLearning/4.1-Perceptron.md)
+  - [多层感知机](./4-DeepLearning/4.2-MLP.md)
+  - [计算图与反向传播](./4-DeepLearning/4.3-BP.md)
   - [生成对抗网络（GAN）](./4-DeepLearning/4.x-GAN.md)
