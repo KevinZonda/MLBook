@@ -26,4 +26,5 @@
 - [序列模型](./5-SequenceModel/README.md)
 - [优化](./6-Optimisation/README.md)
   - [凸函数](./6-Optimisation/6.1-Convex.md)
+  - [梯度下降的变种](./6-Optimisation/6.2-GradientDecent.md)
 - [学习理论](./7-LearningTheory/README.md)
