@@ -21,6 +21,7 @@
 
 - [信息论](./3-InformationTheory/README.md)
   - [自信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
+  - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
 - [序列模型](./5-SequenceModel/README.md)
 - [优化](./6-Optimisation/README.md)
 - [学习理论](./7-LearningTheory/README.md)
