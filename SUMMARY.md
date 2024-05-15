@@ -25,4 +25,5 @@
   - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
 - [序列模型](./5-SequenceModel/README.md)
 - [优化](./6-Optimisation/README.md)
+  - [凸函数](./6-Optimisation/6.1-Convex.md)
 - [学习理论](./7-LearningTheory/README.md)
