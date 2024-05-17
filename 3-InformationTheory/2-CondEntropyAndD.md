@@ -1,5 +1,6 @@
 # 联合熵、条件熵、散度与互信息
 
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
 
 ## 联合熵（Joint Entropy）
 

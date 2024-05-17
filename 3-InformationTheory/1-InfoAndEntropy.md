@@ -1,5 +1,7 @@
 # 自信息与熵
 
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
+
 ## 自信息（Self-Informaiton）
 
 自信息是一个事件的信息量，用来衡量一个事件发生的意外程度。其是通过事件 $x$ 的概率来定义的。当 $P(x)$ 越大，事件发生的概率越大，那么自信息越小，其信息量越小。因此我们可以直觉定义如下：

@@ -13,6 +13,7 @@
   - [逻辑回归](./2-Supervised/2.4-LogisticRegression.md)
   - [非线性变换](./2-Supervised/2.5-NonLinearTransformation.md)
   - [支持向量机 SVM](./2-Supervised/2.6-SVM.md)
+  - [核技巧 Kernel Trick](./2-Supervised/2.7-KernelTrick.md)
 
 - [深度学习](./4-DeepLearning/README.md)
   - [感知机](./4-DeepLearning/4.1-Perceptron.md)

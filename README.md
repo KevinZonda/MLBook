@@ -9,13 +9,17 @@
 
 本读物核心框架基于英国伯明翰大学本科课程 [LC Artificial Intelligence 1 (06 34238)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34238&searchTerm=002022)、[LI Artificial Intelligence 2 (06 34255)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34255&searchTerm=002022)、[LH Machine Learning (06 38965)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=38965&searchTerm=002023)、[LH Neural Computation (06 32167)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=32167&searchTerm=002022) 得来。内容并不完全重合。
 
-这是本关于机器学习基础入门的书籍，并假设了你拥有高中的数学基础，主要包括以下几个部分：
 
-- [1.机器学习基础](./1-Basic/)
-  - [1.1 机器学习概览](./1-Basic/1.1-Overview.md)
-  - [1.2 高中数学复习](./1-Basic/1.2-MathRecap.md)
+## 适用于伯明翰大学学生的标签
 
+由于整本书关联于伯明翰课程，因此我们也为方便伯明翰计算机科学本科与硕士学生，增加了如下标签：
 
+![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
+![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
+![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
+
+其中蓝色与LC指本科第一年课程。绿色与LI指本科第二年课程。红色与LH指本科第三年课程。对于硕士级别课程 LM，其需要学习全部等级的内容（取决于你是 ACS 还是 CS）。
 
 ## 感谢列表
 
