@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>核技巧 Kernel Trick - 机器学习书：以高中数学视角</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">封面</a></li><li class="chapter-item expanded affix "><a href="../Notation.html">符号表</a></li><li class="chapter-item expanded "><a href="../1-Basic/index.html"><strong aria-hidden="true">1.</strong> 机器学习基础</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1-Basic/1.2-MathRecap.html"><strong aria-hidden="true">1.1.</strong> 高中数学回顾</a></li></ol></li><li class="chapter-item expanded "><a href="../2-Supervised/index.html"><strong aria-hidden="true">2.</strong> 监督学习</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2-Supervised/2.1-LinearRegression.html"><strong aria-hidden="true">2.1.</strong> 线性回归</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.2-GD.html"><strong aria-hidden="true">2.2.</strong> 梯度下降 GD</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.3-LinearRegressionGD.html"><strong aria-hidden="true">2.3.</strong> 线性回归与梯度下降</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.4-LogisticRegression.html"><strong aria-hidden="true">2.4.</strong> 逻辑回归</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.5-NonLinearTransformation.html"><strong aria-hidden="true">2.5.</strong> 非线性变换</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.6-SVM.html"><strong aria-hidden="true">2.6.</strong> 支持向量机 SVM</a></li><li class="chapter-item expanded "><a href="../2-Supervised/2.7-KernelTrick.html" class="active"><strong aria-hidden="true">2.7.</strong> 核技巧 Kernel Trick</a></li></ol></li><li class="chapter-item expanded "><a href="../4-DeepLearning/index.html"><strong aria-hidden="true">3.</strong> 深度学习</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4-DeepLearning/4.1-Perceptron.html"><strong aria-hidden="true">3.1.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="../4-DeepLearning/4.2-MLP.html"><strong aria-hidden="true">3.2.</strong> 多层感知机 MLP</a></li><li class="chapter-item expanded "><a href="../4-DeepLearning/4.3-BP.html"><strong aria-hidden="true">3.3.</strong> 计算图与反向传播</a></li><li class="chapter-item expanded "><a href="../4-DeepLearning/4.x-AE.html"><strong aria-hidden="true">3.4.</strong> 自编码器 AE</a></li><li class="chapter-item expanded "><a href="../4-DeepLearning/4.x-GAN.html"><strong aria-hidden="true">3.5.</strong> 生成对抗网络 GAN</a></li></ol></li><li class="chapter-item expanded "><a href="../3-InformationTheory/index.html"><strong aria-hidden="true">4.</strong> 信息论</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3-InformationTheory/1-InfoAndEntropy.html"><strong aria-hidden="true">4.1.</strong> 自信息与熵</a></li><li class="chapter-item expanded "><a href="../3-InformationTheory/2-CondEntropyAndD.html"><strong aria-hidden="true">4.2.</strong> 联合熵、条件熵、散度与互信息</a></li></ol></li><li class="chapter-item expanded "><a href="../5-SequenceModel/index.html"><strong aria-hidden="true">5.</strong> 序列模型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5-SequenceModel/5.1-RNN.html"><strong aria-hidden="true">5.1.</strong> 循环神经网络 RNN</a></li><li class="chapter-item expanded "><a href="../5-SequenceModel/5.2-LSTM.html"><strong aria-hidden="true">5.2.</strong> 长短时记忆网络 LSTM</a></li></ol></li><li class="chapter-item expanded "><a href="../6-Optimisation/index.html"><strong aria-hidden="true">6.</strong> 优化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../6-Optimisation/6.1-Convex.html"><strong aria-hidden="true">6.1.</strong> 凸函数</a></li><li class="chapter-item expanded "><a href="../6-Optimisation/6.2-GradientDecent.html"><strong aria-hidden="true">6.2.</strong> 梯度下降的变种</a></li></ol></li><li class="chapter-item expanded "><a href="../7-LearningTheory/index.html"><strong aria-hidden="true">7.</strong> 学习理论</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">机器学习书：以高中数学视角</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="27-核技巧-kernel-trick"><a class="header" href="#27-核技巧-kernel-trick">2.7 核技巧 Kernel Trick</a></h1>
+<p><img src="https://img.shields.io/badge/LH-Machine%20Learning-red" alt="ML" /></p>
+<p>上一节 SVM，我们定义了 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">κ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">z</span><span class="mclose">)</span></span></span></span> 作为核函数。这里我们将直接求解 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">κ</span></span></span></span> 介绍核技巧（Kernel Trick）。</p>
+<h2 id="mercers-condition"><a class="header" href="#mercers-condition">Mercer's Condition</a></h2>
+<p>寻找一个 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> 能够使得 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">κ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">z</span><span class="mclose">)</span></span></span></span> 是一个困难的问题。但是我们可以通过直接寻找 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">κ</span></span></span></span> 而不去寻找 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">ϕ</span></span></span></span> 来解决这个问题。</p>
+<p>Mercer's Condition 是一个充分条件，如果一个函数 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">z</span><span class="mclose">)</span></span></span></span> 满足 Mercer's Condition，那么我们可以认为 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span> 是一个合法的核函数。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../2-Supervised/2.6-SVM.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../4-DeepLearning/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../2-Supervised/2.6-SVM.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../4-DeepLearning/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
