@@ -31,6 +31,7 @@ jobs:
         chmod +x preprocess.sh
         sh ./preprocess.sh
         mdbook build --dest-dir ../out
+        git reset --hard HEAD
 
     - name: Deploy
       run: |
