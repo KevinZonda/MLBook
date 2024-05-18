@@ -31,3 +31,4 @@
 
 - [@PassingWang](https://github.com/PassingWang)：审阅者（可读性）
 - [@George-Miao](https://github.com/George-Miao)：审阅者（数学）
+- [@LaoshuBaby](https://github.com/LaoshuBaby)：审阅者（可读性，数学）、校对者
