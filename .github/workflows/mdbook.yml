@@ -28,6 +28,8 @@ jobs:
         
     - name: Build book
       run: |
+        chmod +x preprocess.sh
+        sh ./preprocess.sh
         mdbook build --dest-dir ../out
 
     - name: Deploy
