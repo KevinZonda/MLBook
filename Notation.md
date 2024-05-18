@@ -23,6 +23,14 @@
 | $\in$ | 属于 | $\notin$ | 不属于 |
 | $\subset$ | 子集 | $\subseteq$ | 真子集 |
 | $\cup$ | 并集 | $\cap$ | 交集 |
+| $\emptyset$ | 空集 | $\mid \cdot \mid$ | 集合的基数（集合的长度） |
+
+## 条件与逻辑
+
+| 符号 | 含义 | 符号 | 含义 |
+| --- | --- | --- | --- |
+| $\forall$ | 对于所有 | $\exists$ | 存在 |
+| $\rightarrow$ | 可以推导出（充分条件） | $\Leftrightarrow$ / $\leftrightarrow$ | 等价（充要条件） |
 
 ## 导数
 
