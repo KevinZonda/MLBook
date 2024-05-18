@@ -39,7 +39,7 @@
 | $x$ | 实数  $x$  | $X$ | 矩阵 |
 | $\mathbf{x}$ | 向量 $\mathbf{x}$ | $X_i$ | 矩阵 $X$ 的第 $i$ 行 |
 | $\mathbf{x}^{(i)}$ | 向量 $\mathbf{x}$ 的第 $i$ 个元素 | $X_{i, j}$ | 矩阵 $X$ 第 $i$ 行 第 $j$ 列的元素 |
-| $\mathbf{x}_i$ | 第 $i$ 个向量 $\mathbf{x}$ | $X_{, j}$ | 矩阵 $X$ 第 $j$ 列 |
+| $\mathbf{x}_i$ / $x_i$| 第 $i$ 个向量 $\mathbf{x}$ | $X_{, j}$ | 矩阵 $X$ 第 $j$ 列 |
 | $\vert \mathbf{x} \vert$ | 向量 $\mathbf{x}$ 的膜（几何长度） | $\vert\vert \mathbf{x} \vert\vert$| 向量 $\mathbf{x}$ 的膜（几何长度）|
 | $\mathbf{x}^T$ | 向量 $\mathbf{x}$ 的转置 | $X^T$ | 矩阵 $X$ 的转置 |
 
