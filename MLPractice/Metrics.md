@@ -1,4 +1,4 @@
-# 机器学习中的评估指标
+# 评估指标
 
 ![NLP](https://img.shields.io/badge/LH-Natural%20Language%20Processing-red)
 

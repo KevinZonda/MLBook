@@ -18,7 +18,7 @@
   - [支持向量机 SVM](./2-Supervised/2.6-SVM.md)
   - [核技巧 Kernel Trick](./2-Supervised/2.7-KernelTrick.md)
 - [机器学习实践](./MLPractice/README.md)
-  - [指标](./MLPractice/Metrics.md)
+  - [评估指标](./MLPractice/Metrics.md)
   - [过拟合和欠拟合](./MLPractice/OverfitUnderfit.md)
   - [数据集](./MLPractice/Dataset.md)
 - [深度学习](./4-DeepLearning/README.md)
