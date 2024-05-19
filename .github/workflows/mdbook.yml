@@ -44,8 +44,8 @@ jobs:
 
         echo $commit >  ../out/COMMIT.html
         echo $branch >  ../out/HEAD.html
-        echo $branch >> ../out/GIT_INFO.html
-        echo $commit >  ../out/GIT_INFO.html
+        echo $branch >  ../out/GIT_INFO.html
+        echo $commit >> ../out/GIT_INFO.html
         echo 'pong'  >  ../out/ping.html
 
     - name: Deploy
