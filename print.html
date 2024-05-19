@@ -1003,6 +1003,7 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <p>[https://en.wikipedia.org/wiki/Overfitting#/media/File:Overfitted_Data.png]</p>
 <p>上图是一张过拟合的可视化图。图中 11 个点被蓝色的模型完美拟合，因此从训练角度其损失为 0，因此是个”完美的“的模型。但是如果考虑实际情况，黑色线的模型反而可能可以获得更高的性能。</p>
 <p><img src="MLPractice/./img/ov-ud-fitting.png" alt="" /></p>
+<p>[https://www.kaggle.com/code/ryanholbrook/overfitting-and-underfitting]</p>
 <p>上图是训练不同迭代次数与验证损失和训练损失的关系。过拟合发生在训练损失仍在降低，但是验证损失却在上升。即模型正在记住所有训练集的点，但是不能再在正确预测未见过的数据（即无法泛化）。</p>
 <p>过拟合发生并不是单个因素导致的，而是由很多因素混合导致的：</p>
 <ul>
