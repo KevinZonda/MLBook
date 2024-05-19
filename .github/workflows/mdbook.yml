@@ -42,16 +42,11 @@ jobs:
         commit=$(git rev-parse HEAD)
         branch=$(git rev-parse --abbrev-ref HEAD)
 
-        mkdir -p ../out/COMMIT
-        mkdir -p ../out/HEAD
-        mkdir -p ../out/GIT_INFO
-        mkdir -p ../out/ping
-
-        echo $commit >  ../out/COMMIT/index.html
-        echo $branch >  ../out/HEAD/index.html
-        echo $branch >> ../out/GIT_INFO/index.html
-        echo $commit >  ../out/GIT_INFO/index.html
-        echo 'pong'  >  ../out/ping/index.html
+        echo $commit >  ../out/COMMIT.html
+        echo $branch >  ../out/HEAD.html
+        echo $branch >> ../out/GIT_INFO.html
+        echo $commit >  ../out/GIT_INFO.html
+        echo 'pong'  >  ../out/ping.html
 
     - name: Deploy
       run: |
