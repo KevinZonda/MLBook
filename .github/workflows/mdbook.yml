@@ -41,12 +41,16 @@ jobs:
 
         commit=$(git rev-parse HEAD)
         branch=$(git rev-parse --abbrev-ref HEAD)
+        date=$(date "+%Y-%m-%d %H:%M:%S UTC%:z")
 
         echo $commit >  ../out/COMMIT.html
         echo $branch >  ../out/HEAD.html
+        echo "$date" >  ../out/DATE.html
+        echo 'pong'  >  ../out/ping.html
+
         echo $branch >  ../out/GIT_INFO.html
         echo $commit >> ../out/GIT_INFO.html
-        echo 'pong'  >  ../out/ping.html
+        echo "$date" >>  ../out/GIT_INFO.html
 
     - name: Deploy
       run: |
