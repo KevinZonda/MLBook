@@ -998,6 +998,9 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <li>过拟合（overfit）：过度优化，导致模型只是记住数据集中的信息，而不能作用到数据集外的任务。</li>
 <li>欠拟合（underfit）：过少优化，模型还没有到最优点便停止了优化。</li>
 </ul>
+<p><img src="MLPractice/./img/u-ov-fit.png" alt="" />
+[https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html]</p>
+<p>上图分别是欠拟合、正常拟合和过拟合。</p>
 <h2 id="过拟合-overfitting"><a class="header" href="#过拟合-overfitting">过拟合 Overfitting</a></h2>
 <p><img src="MLPractice/./img/overfit.png" alt="undefined" /></p>
 <p>[https://en.wikipedia.org/wiki/Overfitting#/media/File:Overfitted_Data.png]</p>
@@ -1024,8 +1027,16 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <p>**提早停止（Early Stop）**是指当优化发生过拟合时候，提早停止，并使用最优的模型。</p>
 <p>我们期望模型可以对未见过的数据能正常的预测，因此我们会在验证损失最低的情况下，停止训练，而不是等到训练损失最低的情况再停止训练。</p>
 <h2 id="欠拟合-underfitting"><a class="header" href="#欠拟合-underfitting">欠拟合 Underfitting</a></h2>
-<p>欠拟合通常发生在训练还没有达到最优就停止，即训练损失和泛化损失都在降低，但是训练停止了。</p>
-<p>解决方案就很简单了：多练练（x</p>
+<p>欠拟合通常发生在</p>
+<ul>
+<li>
+<p>训练还没有达到最优就停止，即训练损失和泛化损失都在降低，但是训练停止了。</p>
+</li>
+<li>
+<p>模型太弱了，没法正确拟合。</p>
+</li>
+</ul>
+<p>解决方案就很简单了：多练练（x）或者换个更强模型</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="数据集"><a class="header" href="#数据集">数据集</a></h1>
 <p>评估集，测试集</p>
