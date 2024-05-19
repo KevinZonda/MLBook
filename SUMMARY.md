@@ -20,7 +20,7 @@
 - [机器学习实践](./MLPractice/README.md)
   - [评估指标](./MLPractice/Metrics.md)
   - [过拟合和欠拟合](./MLPractice/OverfitUnderfit.md)
-  - [数据集](./MLPractice/Dataset.md)
+  - [数据集分割与验证](./MLPractice/Dataset.md)
 - [深度学习](./4-DeepLearning/README.md)
   - [感知机](./4-DeepLearning/4.1-Perceptron.md)
   - [多层感知机 MLP](./4-DeepLearning/4.2-MLP.md)
