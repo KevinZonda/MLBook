@@ -6,7 +6,7 @@
 - [机器学习基础](./1-Basic/README.md)
   - [高中数学回顾](./1-Basic/1.2-MathRecap.md)
   - [向量和矩阵](./1-Basic/1.3-LinearAlgebraBase.md)
-  - [额外的数学：偏导](./1-Basic/1.3.3-MathExtra.PartialDerivative.md)
+  - [从导数到偏导数](./1-Basic/1.4-PartialDerivative.md)
   - [额外的数学：概率论](./1-Basic/1.3.2-MathExtra.ProbabilityTheory.md)
 
 - [监督学习](./2-Supervised/README.md)
