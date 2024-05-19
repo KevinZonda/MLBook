@@ -17,7 +17,10 @@
   - [非线性变换](./2-Supervised/2.5-NonLinearTransformation.md)
   - [支持向量机 SVM](./2-Supervised/2.6-SVM.md)
   - [核技巧 Kernel Trick](./2-Supervised/2.7-KernelTrick.md)
-
+- [机器学习实践](./MLPractice/README.md)
+  - [指标](./MLPractice/Metrics.md)
+  - [过拟合和欠拟合](./MLPractice/OverfitUnderfit.md)
+  - [数据集](./MLPractice/Dataset.md)
 - [深度学习](./4-DeepLearning/README.md)
   - [感知机](./4-DeepLearning/4.1-Perceptron.md)
   - [多层感知机 MLP](./4-DeepLearning/4.2-MLP.md)
