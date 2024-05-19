@@ -1,10 +1,12 @@
 # 数据集分割与验证
 
 ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
+![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
+![NLP](https://img.shields.io/badge/LH-Natural%20Language%20Processing-red)
 
 ## 分割数据集
 
-在实践中，我们通常不会将所有数据点都用于训练模型，而根据模型训练的不同阶段，将数据集划分为训练集（training set，$\mathcal{D}_\text{train}$）、验证集（validation set，$\mathcal{D}_\text{valid}$）和测试集（testing set，$\mathcal{D}_\text{test}$）。
+在实践中，我们通常不会将所有数据点都用于训练模型，而根据模型训练的不同阶段，将数据集划分为训练集（training set，$\mathcal{D}_\text{train}$）、验证集（validation set，$\mathcal{D}_\text{valid}$，也称开发集，dev set）和测试集（testing set，$\mathcal{D}_\text{test}$）。
 
 ![](./img/split.png)
 

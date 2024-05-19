@@ -1,5 +1,9 @@
 # 过拟合和欠拟合
 
+![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
+![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
+![NLP](https://img.shields.io/badge/LH-Natural%20Language%20Processing-red)
+
 过拟合（overfit）和欠拟合（underfit）是两个机器学习中很常见的词汇，其通常代表着模型的两种状态
 
 - 过拟合（overfit）：过度优化，导致模型只是记住数据集中的信息，而不能作用到数据集外的任务。
@@ -11,8 +15,6 @@
 上图分别是欠拟合、正常拟合和过拟合。
 
 ## 过拟合 Overfitting
-
-
 
 ![undefined](./img/overfit.png)
 
