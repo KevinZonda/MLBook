@@ -31,8 +31,21 @@ jobs:
         chmod +x preprocess.sh
         sh ./preprocess.sh
         mdbook build --dest-dir ../out
-        rm -rf ../out/.git
         git reset --hard HEAD
+    
+    - name: Patch dist
+      run: |
+        rm -rf ../out/.git
+        rm -rf ../out/*.py
+        rm -rf ../out/*.sh
+
+        commit=$(git rev-parse HEAD)
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        echo $commit >  ../out/COMMIT
+        echo $branch >  ../out/HEAD
+        echo $commit >  ../out/GIT_INFO
+        echo $branch >> ../out/GIT_INFO
+        echo 'pong'  >  ../out/ping
 
     - name: Deploy
       run: |
