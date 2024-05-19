@@ -15,7 +15,7 @@ P(\text{Correct}) &=\frac{\text{Count(Correct)}}{\text{Count(All)}}\\
 $$
 你获得了一个非常非常高得正确率，但是这个模型毫无意义，因为它根本挑不出负面的评价！
 
-## 情况分类
+## 情况分析
 
 <table style="text-align: center">
     <tr>
@@ -125,3 +125,96 @@ $$
 
 对于伪阴性特别敏感的任务，例如医疗中的漏诊（宁可错杀也不放过），我们通常选择召回率作为指标。  
 而对于伪阳性敏感的任务，例如垃圾邮件过滤（我们不希望有任何一封普通邮件被判定为垃圾邮件，因此如果不确定则会倾向于分类为普通邮件），我们通常使用精确性作为指标。
+
+## 混淆矩阵 Confusion Matrix
+
+混淆矩阵 Confusion Matrix 是一个 $2 \times 2$ 的矩阵，其列代表模型的预测结果，其和我们上文定义的表格很类似：
+$$
+\begin{bmatrix}
+\text{TP} & \text{FP} \\
+\text{FN} & \text{TN} \\
+\end{bmatrix}
+$$
+
+或者写成：
+
+$$
+\begin{bmatrix}
+\text{真阳性} & \text{伪阳性} \\
+\text{伪阴性} & \text{真阴性} \\
+\end{bmatrix}
+$$
+
+
+## 宏观平均和微观平均
+
+宏观平均（Macro-average）和微观平均（Micro-average）是两种不同的平均方式。
+
+**宏观平均**指我们会对每个数据集的指标进行计算，然后求平均值。而如果使用**微观平均**，我们会将所有数据集的混淆矩阵相加，然后使用最终的混淆矩阵计算指标。
+
+考虑如果我们有 3 个不同的数据集，其混淆矩阵分别为：
+
+$$
+\begin{bmatrix}
+\text{8} & \text{11} \\
+\text{8} & \text{340} \\
+\end{bmatrix}
+
+\begin{bmatrix}
+\text{60} & \text{55} \\
+\text{40} & \text{212} \\
+\end{bmatrix}
+
+\begin{bmatrix}
+\text{200} & \text{33} \\
+\text{51} & \text{83} \\
+\end{bmatrix}
+$$
+
+需要求平均的精确率。
+
+因此对于宏观平均，我们先计算每个数据集的精确率：
+
+$$
+\begin{align}
+\text{Precision}_1 &= \frac{8}{8+11} = 0.42\\
+\text{Precision}_2 &= \frac{60}{60+55} = 0.52\\
+\text{Precision}_3 &= \frac{200}{200+33} = 0.86\\
+\end{align}
+$$
+
+因此其宏观平均为：
+
+$$
+\text{Macro-Average Precision} = \frac{0.42+0.52+0.86}{3} = 0.60
+$$
+
+而如果我们希望计算微观平均，我们需要将所有的混淆矩阵相加：
+$$
+
+\begin{bmatrix}
+\text{8} & \text{11} \\
+\text{8} & \text{340} \\
+\end{bmatrix}
++
+\begin{bmatrix}
+\text{60} & \text{55} \\
+\text{40} & \text{212} \\
+\end{bmatrix}
++
+\begin{bmatrix}
+\text{200} & \text{33} \\
+\text{51} & \text{83} \\
+\end{bmatrix}
+
+=
+\begin{bmatrix}
+\text{268} & \text{99} \\
+\text{99} & \text{635} \\
+\end{bmatrix}
+$$
+
+我们可以计算其微观平均精确率为：
+$$
+\text{Micro-Average Precision} = \frac{268}{268+99} = 0.73
+$$
