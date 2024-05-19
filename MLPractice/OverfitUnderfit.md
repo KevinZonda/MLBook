@@ -5,6 +5,11 @@
 - 过拟合（overfit）：过度优化，导致模型只是记住数据集中的信息，而不能作用到数据集外的任务。
 - 欠拟合（underfit）：过少优化，模型还没有到最优点便停止了优化。
 
+![](./img/u-ov-fit.png)
+[https://scikit-learn.org/stable/auto_examples/model_selection/plot_underfitting_overfitting.html]
+
+上图分别是欠拟合、正常拟合和过拟合。
+
 ## 过拟合 Overfitting
 
 
@@ -54,6 +59,10 @@ $$
 
 ## 欠拟合 Underfitting
 
-欠拟合通常发生在训练还没有达到最优就停止，即训练损失和泛化损失都在降低，但是训练停止了。
+欠拟合通常发生在
 
-解决方案就很简单了：多练练（x
+- 训练还没有达到最优就停止，即训练损失和泛化损失都在降低，但是训练停止了。
+
+- 模型太弱了，没法正确拟合。
+
+解决方案就很简单了：多练练（x）或者换个更强模型
