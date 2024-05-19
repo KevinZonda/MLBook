@@ -19,6 +19,8 @@
 
 ![](./img/ov-ud-fitting.png)
 
+[https://www.kaggle.com/code/ryanholbrook/overfitting-and-underfitting]
+
 上图是训练不同迭代次数与验证损失和训练损失的关系。过拟合发生在训练损失仍在降低，但是验证损失却在上升。即模型正在记住所有训练集的点，但是不能再在正确预测未见过的数据（即无法泛化）。
 
 过拟合发生并不是单个因素导致的，而是由很多因素混合导致的：
