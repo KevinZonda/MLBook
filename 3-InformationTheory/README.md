@@ -1,1 +1,1 @@
-# 信息论
+# 信息论 Information Theory

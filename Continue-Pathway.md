@@ -6,12 +6,12 @@
   - [深度学习](./4-DeepLearning/)
 
 - 机器学习：
-  - [数据挖掘与数据分析](./DataMining/README.md)
-  - [学习理论](./7-LearningTheory/README.md)
+  - [数据挖掘与数据分析](./DataMining/)
+  - [学习理论](./7-LearningTheory/)
 
 - 机器视觉：
-  - [深度学习](./4-DeepLearning/README.md)
+  - [深度学习](./4-DeepLearning/)
 
 - 自然语言处理：
-  - [深度学习](./4-DeepLearning/README.md)
-  - [序列模型](./5-SequenceModel/README.md)
+  - [深度学习](./4-DeepLearning/)
+  - [序列模型](./5-SequenceModel/)
