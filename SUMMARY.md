@@ -22,7 +22,7 @@
   - [过拟合和欠拟合](./MLPractice/OverfitUnderfit.md)
   - [数据集分割与验证](./MLPractice/Dataset.md)
   - [梯度下降的变种](./MLPractice/GDVariants.md)
-- [Old School [WIP]](./OldSchool/)
+- [Old School [WIP]](./OldSchool/README.md)
   - [约束问题 CSP [WIP]](./OldSchool/CSP.md)
   - [广度搜索 BFS [WIP]](./OldSchool/BFS.md)
   - [深度搜索 DFS [WIP]](./OldSchool/DFS.md)
