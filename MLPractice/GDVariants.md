@@ -1,4 +1,4 @@
-# 6.2 梯度下降的变种
+# 梯度下降的变种
 
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
 ![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
