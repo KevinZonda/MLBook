@@ -32,6 +32,7 @@
     - [深度学习](./4-DeepLearning/)
   - Machine Learning:
     - [学习理论](./7-LearningTheory/)
+    - [优化](./6-Optimisation/)
   - Intelligent Data Analysis:
     - [数据挖掘与数据分析](./DataMining/)
   - Natural Language Processing:
