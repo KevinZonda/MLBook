@@ -179,7 +179,7 @@
 <p>首先，先需要选择一个<strong>假说（hypothesis）</strong>（或者模型），这个假说是我们认为能够解决问题的一个函数。这个函数的输入是我们的特征（features），输出是我们的目标变量（target variable）。我们的目标是找到一个函数，使得这个函数能够最好地拟合我们的数据。</p>
 <p>而为了使这个假说能够拟合数据，我们需要定义一个<strong>损失函数（loss function）</strong>，这个损失函数能够衡量我们的假说在训练集上的表现。越高的损失代表我们的模型错的越多，因此我们的目标是最小化这个损失函数。</p>
 <p>损失函数又叫<strong>成本函数（cost function）</strong>，<strong>目标函数（objective function）<strong>或者</strong>误差函数（error function）</strong>。我们通常使用 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">L</span></span></span></span>、 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.09618em;">J</span></span></span></span> 或 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span> 表示这个函数。对于不同任务我们通常会定义不同的损失函数，比如对于回归任务我们通常使用均方误差（Mean Squared Error，MSE）作为损失函数，对于分类任务我们通常使用交叉熵（Cross Entropy）作为损失函数。</p>
-<p>在机器学习中，我们通常使用一些手段来最小化损失函数。我们称呼这些手段为<strong>优化（Optimisation）</strong>。优化的目标是找到一个参数集合，使得损失函数最小化。我们通常使用梯度下降（Gradient Descent）来优化损失函数。</p>
+<p>在机器学习中，我们通常使用一些手段来最小化损失函数。我们称呼这些手段为<strong>优化（Optimisation）</strong>。优化的目标是找到一个参数集合，使得损失函数最小化。我们通常使用梯度下降（Gradient Descent）来优化损失函数。而优化的过程，也是在让模型学习数据集的过程，我们称之为<strong>训练（Training）</strong>。</p>
 <p>别担心可能还不知道其中的一些概念，我们会在后面的章节中详细讲解。</p>
 
                     </main>
