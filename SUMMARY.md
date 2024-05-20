@@ -8,6 +8,7 @@
   - [向量和矩阵](./1-Basic/1.3-LinearAlgebraBase.md)
   - [从导数到偏导数](./1-Basic/1.4-PartialDerivative.md)
   - [概率论 [WIP]](./1-Basic/1.5-ProbabilityTheory.md)
+  - [机器学习问题定义](./1-Basic/1.6-MLProblem.md)
 
 - [监督学习](./2-Supervised/README.md)
   - [线性回归](./2-Supervised/2.1-LinearRegression.md)
