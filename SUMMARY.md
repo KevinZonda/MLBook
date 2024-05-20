@@ -39,19 +39,29 @@
   - [生成对抗网络 GAN](./4-DeepLearning/4.x-GAN.md)
   - [自注意力机制与 Transformer [WIP]](./4-DeepLearning/4.x-SelfAttention.md)
 
-- [信息论](./3-InformationTheory/README.md)
-  - [自信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
-  - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
 - [序列模型](./5-SequenceModel/README.md)
   - [循环神经网络 RNN](./5-SequenceModel/5.1-RNN.md)
   - [长短时记忆网络 LSTM](./5-SequenceModel/5.2-LSTM.md)
   - [Transformer [WIP]](./5-SequenceModel/5.5-Transformer.md)
-- [优化](./6-Optimisation/README.md)
-  - [凸函数](./6-Optimisation/6.1-Convex.md)
+
+- [聚类算法 [WIP]](./Clustering/README.md)
+  - [层次聚类 [WIP]](./Clustering/Hierarchical.md)
+  - [K近邻 [WIP]](./Clustering/kNN.md)
+  - [DBScan [WIP]](./Clustering/DBScan.md)
+  - [高斯混合模型 GMM [WIP]](./Clustering/GMM.md)
+
 - [数据挖掘与数据分析 [WIP]](./DataMining/README.md)
   - [PCA [WIP]](./DataMining/PCA.md)
   - [SVD [WIP]](./DataMining/SVD.md)
   - [随机森林 [WIP]](./DataMining/RandomForest.md)
+
+- [优化](./6-Optimisation/README.md)
+  - [凸函数](./6-Optimisation/6.1-Convex.md)
+
+- [信息论](./3-InformationTheory/README.md)
+  - [自信息与熵](./3-InformationTheory/1-InfoAndEntropy.md)
+  - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
+
 - [学习理论](./7-LearningTheory/README.md)
 
 [代码附录](./Code.md)
