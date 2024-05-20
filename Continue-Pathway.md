@@ -3,7 +3,7 @@
 在这之后，你可以选择继续根据不同的兴趣和目标选择不同的路径。以下是一些可能的路径：
 
 - 深度学习：
-  - [深度学习](./4-DeepLearning/README.md)
+  - [深度学习](./4-DeepLearning/)
 
 - 机器学习：
   - [数据挖掘与数据分析](./DataMining/README.md)
