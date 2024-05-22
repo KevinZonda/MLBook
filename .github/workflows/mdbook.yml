@@ -22,6 +22,7 @@ jobs:
         cd dep
         wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
         wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
+        wget https://ftp.kevinzonda.com/dist/mdbook-mermaid%400.13.0-x64/mdbook-mermaid
         chmod +x *
         echo "$(pwd)" >> $GITHUB_PATH
         cd ../MLBook

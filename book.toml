@@ -5,6 +5,12 @@ multilingual = false
 src = "."
 title = "机器学习书：以高中数学视角"
 
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
+
 [preprocessor.katex]
 after = ["links"]
 # KaTeX options.
