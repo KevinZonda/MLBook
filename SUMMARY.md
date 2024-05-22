@@ -9,7 +9,7 @@
   - [从导数到偏导数](./1-Basic/1.4-PartialDerivative.md)
   - [概率论 [WIP]](./1-Basic/1.5-ProbabilityTheory.md)
   - [机器学习问题定义](./1-Basic/1.6-MLProblem.md)
-
+  - [不同机器学习种类](./1-Basic/1.7-Kinds.md)
 - [监督学习](./2-Supervised/README.md)
   - [线性回归](./2-Supervised/2.1-LinearRegression.md)
   - [梯度下降 GD](./2-Supervised/2.2-GD.md)
