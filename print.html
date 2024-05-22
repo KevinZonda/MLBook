@@ -1474,7 +1474,21 @@ TODO: COPYRIGHT</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="自注意力机制与-transformer"><a class="header" href="#自注意力机制与-transformer">自注意力机制与 Transformer</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
-<h1 id="序列模型"><a class="header" href="#序列模型">序列模型</a></h1>
+<h1 id="序列模型-sequential-model"><a class="header" href="#序列模型-sequential-model">序列模型 Sequential Model</a></h1>
+<p>序列信息是一类特殊的信息，考虑如下信息：</p>
+<pre><code>101010111011101110101010
+</code></pre>
+<p>相信很多人会意识到其是摩斯电码中表示 <code>SOS</code> 的序列。</p>
+<p>如果我们的模型希望通过读取序列，从而识别序列内容通常会遇到很多问题。</p>
+<h2 id="挑战-1不定长度的输入"><a class="header" href="#挑战-1不定长度的输入">挑战 1：不定长度的输入</a></h2>
+<p>而最基础的就是序列信息是<strong>不定长</strong>的。考虑我们之前几乎所有的模型，其都明确确定输入是一个 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">d</span></span></span></span> 维的向量，但是对于序列信息，例如摩斯电码信息，很多时候我们并不清楚其长度。</p>
+<p>一些可能的做法是我训练一个其输入接受尽可能多的数据的模型。例如我们可以训练一个接受 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">512</span></span></span></span> 维度的数据的模型。但是其问题是很难训，计算消耗很大，而更重要的是可能创造出一个超过这个维度的数据。</p>
+<p>我们将在后文讨论深度学习网络是怎么解决这个问题的。</p>
+<h2 id="挑战-2不定长度的输出"><a class="header" href="#挑战-2不定长度的输出">挑战 2：不定长度的输出</a></h2>
+<p>如果我们将对话看作是序列信息的话，那么如果模型想回复一段信息的话也仍然会遇到和不定长输入相同的问题：模型可能会回复很短的话，例如 <code>OK!</code> 也可能发送一篇 300 字的作文。和不定长输入问题类似，我们可以训练一个可以输出超高输出维度的模型。而其也有和挑战 1 相同的问题。</p>
+<h2 id="挑战-3顺序信息"><a class="header" href="#挑战-3顺序信息">挑战 3：顺序信息</a></h2>
+<p>序列信息通常顺序很重要，例如 <code>我爱你</code> 和 <code>你爱我</code> 虽然只是语序不同，但是其表达的含义完全不一样。因此我们需要一个模型可以理解输入的顺序。</p>
+<p>在面对如此多的挑战，我们因此提出序列模型以解决这些问题。这一节，我们将讨论序列模型中的最经典的模型，包括 RNN、LSTM 和 Transformer。这些模型也都是目前大语言模型的基础。</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="循环神经网络-rnn"><a class="header" href="#循环神经网络-rnn">循环神经网络 RNN</a></h1>
 <p><img src="https://img.shields.io/badge/LH-Neural%20Compulation-red" alt="NC" /></p>
