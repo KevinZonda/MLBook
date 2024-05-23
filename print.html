@@ -816,6 +816,9 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="26-支持向量机-support-vector-machine待完成"><a class="header" href="#26-支持向量机-support-vector-machine待完成">2.6 支持向量机 Support Vector Machine【待完成】</a></h1>
 <p><img src="https://img.shields.io/badge/LH-Machine%20Learning-red" alt="ML" /></p>
+<blockquote>
+<p><strong>💡 提醒：</strong> 这一节内容非常复杂。需要你有足够的耐心和一定的数学功底。第一遍阅读可以略读或跳过这一节。</p>
+</blockquote>
 <p>支持向量机（Support Vector Machine, SVM）是一种二分类模型，其基本模型是定义在特征空间上的间隔最大的线性分类器，其学习策略便是间隔最大化。SVM 通过间隔最大化，可以使得模型对噪声更加鲁棒，从而提高模型的泛化能力。</p>
 <p>和逻辑回归一样，支持向量机是一个二分类模型，且其也是个线性模型，即其分割超平面为 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9247em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathbf">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。我们可以将数据集分为两类，一类为正类，一类为负类。</p>
 <blockquote>
@@ -933,6 +936,9 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="27-核技巧-kernel-trick"><a class="header" href="#27-核技巧-kernel-trick">2.7 核技巧 Kernel Trick</a></h1>
 <p><img src="https://img.shields.io/badge/LH-Machine%20Learning-red" alt="ML" /></p>
+<blockquote>
+<p><strong>💡 提醒：</strong> 这一节内容依赖于 SVM。如果你跳过了 SVM 也请跳过这一节。</p>
+</blockquote>
 <p>上一节 SVM，我们定义了 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">κ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathbf">z</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.0913em;vertical-align:-0.25em;"></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathnormal">ϕ</span><span class="mopen">(</span><span class="mord mathbf">z</span><span class="mclose">)</span></span></span></span> 作为核函数。这里我们将在这一节更细节地讨论核技巧。</p>
 <blockquote>
 <p>核方法和核技巧本质上是相同的概念，只是在不同语境下使用的不同术语。</p>
@@ -969,6 +975,9 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="支持向量回归-support-vector-regression"><a class="header" href="#支持向量回归-support-vector-regression">支持向量回归 Support Vector Regression</a></h1>
+<blockquote>
+<p><strong>💡 提醒：</strong> 这一节内容依赖于 SVM。如果你跳过了 SVM 也请跳过这一节。</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="机器学习实践"><a class="header" href="#机器学习实践">机器学习实践</a></h1>
 <p>这一节我们将讨论机器学习在实际应用中的一些情况与操作，包括划分数据集、过拟合等。</p>
