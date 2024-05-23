@@ -5,9 +5,6 @@ multilingual = false
 src = "."
 title = "机器学习书：以高中数学视角"
 
-[preprocessor.chapter-number]
-renderer = ["html"]
-
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
