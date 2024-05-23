@@ -25,6 +25,7 @@
 > ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
 > ![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
 > ![NLP](https://img.shields.io/badge/LH-Natural%20Language%20Processing-red)
+> ![CV](https://img.shields.io/badge/LH-Computer%20Vision-red)
 >
 > 其中蓝色与LC指本科第一年课程。绿色与LI指本科第二年课程。红色与LH指本科第三年课程。对于硕士级别课程 LM，其需要学习全部等级的内容（取决于你是 ACS 还是 CS）。
 
