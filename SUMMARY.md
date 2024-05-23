@@ -46,7 +46,7 @@
   - [长短时记忆网络 LSTM](./5-SequenceModel/5.2-LSTM.md)
   - [Transformer [WIP]](./5-SequenceModel/5.5-Transformer.md)
 
-- [聚类算法 [WIP]](./Clustering/README.md)
+- [聚类算法](./Clustering/README.md)
   - [层次聚类](./Clustering/Hierarchical.md)
   - [K近邻 [WIP]](./Clustering/kNN.md)
   - [DBScan [WIP]](./Clustering/DBScan.md)
