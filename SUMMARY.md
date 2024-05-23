@@ -48,6 +48,7 @@
 
 - [聚类算法](./Clustering/README.md)
   - [层次聚类](./Clustering/Hierarchical.md)
+  - [K均值聚类](./Clustering/K-means.md)
   - [K近邻 [WIP]](./Clustering/kNN.md)
   - [DBScan [WIP]](./Clustering/DBScan.md)
   - [高斯混合模型 GMM [WIP]](./Clustering/GMM.md)
