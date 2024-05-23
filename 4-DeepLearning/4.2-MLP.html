@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -147,6 +148,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/KevinZonda/MLBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -187,7 +191,7 @@
 <h2 id="优化"><a class="header" href="#优化">优化</a></h2>
 <p>如果我们把原图中的输出当作预测值，最直觉的方法我们可以通过计算预测值和真实值的差距来优化网络。我们可以通过梯度下降来优化网络。</p>
 <p>但是我们应该怎么样去求梯度变成了问题，我们可以通过反向传播（Backpropagation）来求解。反向传播是一种通过计算图的方式来求解梯度的方法。我们可以通过链式法则来求解梯度。我们将在下一章介绍。</p>
-
+<footer id="open-on-gh">找到了问题？<a href="https://github.com/KevinZonda/MLBook/edit/master/4-DeepLearning/4.2-MLP.md">在 GitHub 上编辑这个页面</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -236,6 +240,7 @@
         <!-- Custom JS scripts -->
         <script src="../mermaid.min.js"></script>
         <script src="../mermaid-init.js"></script>
+        <script src="../theme/pagetoc.js"></script>
 
 
     </div>

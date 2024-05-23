@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
 
     </head>
     <body class="sidebar-visible no-js">
@@ -147,6 +148,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/KevinZonda/MLBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -212,7 +216,7 @@
 <p>但是由于自编码器是一个无监督学习模型，因此我们无法直接使用自编码器来进行其他任务（我们并不清楚隐藏层的特征是什么）。我们以二元分类任务为例，我们可以使用自编码器的隐藏层特征作为输入，然后训练一个监督学习的分类模型，例如 SVM 或逻辑回归，这个模型被定义为 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7224em;vertical-align:-0.0391em;"></span><span class="mord mathcal" style="margin-right:0.07944em;">Z</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord"><span class="mord mathbb">R</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7805em;vertical-align:-0.0972em;"></span><span class="mord mathcal" style="margin-right:0.08222em;">Y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mclose">}</span></span></span></span>。</p>
 <p>需要注意的是自编码器并<strong>不适合进行生成数据</strong>。如果我们需要生成数据，我们通常需要从特征空间（或隐空间）中采样一些数据，并将数据放进解码器以生成。</p>
 <p>而自编码器的隐藏层是一个固定的特征提取器，对于整个隐空间 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.07944em;">Z</span></span></span></span> （特征空间），其特征都是一个个点，而这些点相对于这个空间太过稀疏（Sparse），难以直接通过采样来生成数据。为了生成数据，我们可以使用变分自编码器或生成对抗网络。</p>
-
+<footer id="open-on-gh">找到了问题？<a href="https://github.com/KevinZonda/MLBook/edit/master/4-DeepLearning/4.x-AE.md">在 GitHub 上编辑这个页面</a></footer>
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -261,6 +265,7 @@
         <!-- Custom JS scripts -->
         <script src="../mermaid.min.js"></script>
         <script src="../mermaid-init.js"></script>
+        <script src="../theme/pagetoc.js"></script>
 
 
     </div>

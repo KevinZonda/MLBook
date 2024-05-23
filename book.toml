@@ -8,9 +8,6 @@ title = "机器学习书：以高中数学视角"
 [preprocessor.mermaid]
 command = "mdbook-mermaid"
 
-[output.html]
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
-
 [preprocessor.katex]
 after = ["links"]
 # KaTeX options.
@@ -29,3 +26,23 @@ include-src = false
 block-delimiter = { left = "$$", right = "$$" }
 inline-delimiter = { left = "$", right = "$" }
 pre-render = true
+
+[preprocessor.open-on-gh]
+command = "mdbook-open-on-gh"
+renderer = ["html"]
+
+[preprocessor.pagetoc]
+
+[output.html]
+additional-js = [
+    "mermaid.min.js", "mermaid-init.js", # mermaid
+    "theme/pagetoc.js"
+]
+
+#pagetoc
+additional-css = ["theme/pagetoc.css"]
+
+# open-on-gh
+git-repository-url = "https://github.com/KevinZonda/MLBook"
+git-branch = "master"
+open-on-text = "找到了问题？[在 GitHub 上编辑这个页面]"
