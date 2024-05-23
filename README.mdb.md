@@ -1,15 +1,17 @@
 # 机器学习书：以高中数学视角
 
-```admonish warning title="施工中..."
+```admonish warning title=""
 项目还在早期阶段，内容目前还不完整且没有经过完整检查与审核，可能存在错误。可能包含部分私有内容，如有侵权请联系作者。  
 ```
 
-```admonish info title="访问地址"
+```admonish info title=""
 本内容可以在 [mlbook.dev](https://mlbook.dev/) 与 [GitHub](https://github.com/KevinZonda/MLBook) 获取。
 ```
 
-> 谨以此书，献给我的大学三年。  
-> by KevinZonda
+```admonish info title=""
+谨以此书，献给我的大学三年。  
+by KevinZonda
+```
 
 ![](assets/cover.png)
 

@@ -34,9 +34,7 @@ $$
 ## Correct
 
 $$
-P[
-|E_{\text{in}}(h) - E_{\text{out}}(h)|
-> \epsilon ]
+P[|E_{\text{in}}(h) - E_{\text{out}}(h)|> \epsilon ]
 
 \textcolor{red}{\leq 2Me^{-2\epsilon^2N}}
 $$

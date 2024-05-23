@@ -71,4 +71,6 @@ H(X)
 \end{align}
 $$
 
-> 对于连续变量，我们会使用不同公式。具体请参照 [Wikipedia](https://en.wikipedia.org/wiki/Entropy_(information_theory)#Entropy_for_continuous_random_variables)。
+```admonish info title=""
+对于连续变量，我们会使用不同公式。具体请参照 [Wikipedia](https://en.wikipedia.org/wiki/Entropy_(information_theory)#Entropy_for_continuous_random_variables)。
+```
