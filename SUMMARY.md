@@ -47,7 +47,7 @@
   - [Transformer [WIP]](./5-SequenceModel/5.5-Transformer.md)
 
 - [聚类算法 [WIP]](./Clustering/README.md)
-  - [层次聚类 [WIP]](./Clustering/Hierarchical.md)
+  - [层次聚类](./Clustering/Hierarchical.md)
   - [K近邻 [WIP]](./Clustering/kNN.md)
   - [DBScan [WIP]](./Clustering/DBScan.md)
   - [高斯混合模型 GMM [WIP]](./Clustering/GMM.md)
