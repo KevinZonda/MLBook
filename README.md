@@ -16,8 +16,8 @@
 本读物核心框架基于英国伯明翰大学本科课程 [LC Artificial Intelligence 1 (06 34238)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34238&searchTerm=002022)、[LI Artificial Intelligence 2 (06 34255)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=34255&searchTerm=002022)、[LH Machine Learning (06 38965)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=38965&searchTerm=002023)、[LH Neural Computation (06 32167)](https://program-and-modules-handbook.bham.ac.uk/webhandbooks/WebHandbooks-control-servlet?Action=getModuleDetailsList&pgSubj=06&pgCrse=32167&searchTerm=002022) 得来。内容并不完全重合。
 
 
-> ## 适用于伯明翰大学学生的标签
->
+> **适用于伯明翰大学学生的标签**
+> 
 > 由于整本书关联于伯明翰课程，因此我们也为方便伯明翰计算机科学本科与硕士学生，增加了如下标签：
 >
 > ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
