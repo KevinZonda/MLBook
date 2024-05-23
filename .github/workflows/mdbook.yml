@@ -25,6 +25,7 @@ jobs:
         wget https://ftp.kevinzonda.com/dist/mdbook-mermaid%400.13.0-x64/mdbook-mermaid
         wget https://ftp.kevinzonda.com/dist/mdbook-open-on-gh%402.4.3-x64/mdbook-open-on-gh
         wget https://ftp.kevinzonda.com/dist/mdbook-pagetoc%400.2.0-x64/mdbook-pagetoc
+        wget https://ftp.kevinzonda.com/dist/mdbook-admonish%401.16.0-x64/mdbook-admonish
         chmod +x *
         echo "$(pwd)" >> $GITHUB_PATH
         cd ../MLBook

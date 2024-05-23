@@ -31,6 +31,9 @@ pre-render = true
 command = "mdbook-open-on-gh"
 renderer = ["html"]
 
+[preprocessor.admonish]
+command = "mdbook-admonish"
+
 [preprocessor.pagetoc]
 
 [output.html]
@@ -40,7 +43,10 @@ additional-js = [
 ]
 
 #pagetoc
-additional-css = ["theme/pagetoc.css"]
+additional-css = [
+    "theme/pagetoc.css",
+    "theme/mdbook-admonish.css"
+]
 
 # open-on-gh
 git-repository-url = "https://github.com/KevinZonda/MLBook"
