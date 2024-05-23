@@ -1,5 +1,7 @@
 # 层次聚类 Hierarchical Clustering
 
+![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
+
 ![](./img/hc.png)
 
 层次聚类算法非常简单。它的主要思想是将数据集中的每个数据点视为一个单独的类，然后逐渐合并这些类，直到所有数据点都在一个类中。

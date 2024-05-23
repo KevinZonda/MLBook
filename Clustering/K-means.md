@@ -1,5 +1,7 @@
 # K均值 K-means
 
+![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
+
 [Material Adapted from Dr. Shuo Wang @ UoB]
 
 K均值算法的核心思想是用平均值描述每个聚类。对于聚类 $c$，其平均值被定义为

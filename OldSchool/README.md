@@ -1,5 +1,7 @@
 # Old School
 
-适合怀旧和应试的朋友。
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
 
-如果不是必须，请跳过这一节。
+适合怀旧的朋友。
+
+如果不是算法爱好者或者要考试，可以考虑跳过这一节。
