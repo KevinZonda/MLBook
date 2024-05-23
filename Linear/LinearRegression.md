@@ -1,4 +1,4 @@
-# 2.1 线性回归
+# 线性回归
 
 ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
 [![](https://img.shields.io/badge/py-代码-blue?logo=python&logoColor=f5f5f5)](https://github.com/KevinZonda/MLBook/blob/master/code/Supervised/2.1-LinearRegression.ipynb)

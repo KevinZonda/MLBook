@@ -1,4 +1,4 @@
-# 2.3 线性回归与梯度下降
+# 线性回归与梯度下降
 
 ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)

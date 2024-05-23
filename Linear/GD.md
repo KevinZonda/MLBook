@@ -1,4 +1,4 @@
-# 2.2 梯度下降 Gradient Descent
+# 梯度下降 Gradient Descent
 
 ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)

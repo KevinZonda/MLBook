@@ -1,4 +1,4 @@
-# 2.5 非线性变换
+# 非线性变换
 
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
 ![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)

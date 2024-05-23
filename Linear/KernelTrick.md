@@ -1,4 +1,4 @@
-# 2.7 核技巧 Kernel Trick
+# 核技巧 Kernel Trick
 
 ![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
 

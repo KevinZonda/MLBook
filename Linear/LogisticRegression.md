@@ -1,4 +1,4 @@
-# 2.4 逻辑回归
+# 逻辑回归
 
 ![AI1](https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue)
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
