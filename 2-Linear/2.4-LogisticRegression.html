@@ -175,7 +175,8 @@
                     <main>
                         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
 <h1 id="24-逻辑回归"><a class="header" href="#24-逻辑回归">2.4 逻辑回归</a></h1>
-<p><img src="https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue" alt="AI1" /></p>
+<p><img src="https://img.shields.io/badge/LC-Artificial%20Inteligence%201-blue" alt="AI1" />
+<img src="https://img.shields.io/badge/LH-Neural%20Compulation-red" alt="NC" /></p>
 <p>在学习完线性回归后，我们来学习逻辑回归。逻辑回归（Logistic Regression）是一种二元分类（Binary Classification）算法。分类算法故名思议就是将数据分为不同的类别。而二元则是表示分的类别总共由 2 个，我们可以将其命名为正类（Positive）和负类（Negative）。</p>
 <h2 id="定义问题"><a class="header" href="#定义问题">定义问题</a></h2>
 <p>我们定义正类的标签 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span> ，负类的标签 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。因此我们可以定义数据集为：</p>
