@@ -34,12 +34,13 @@ renderer = ["html"]
 [preprocessor.pagetoc]
 
 [output.html]
-# mermaid
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
+additional-js = [
+    "mermaid.min.js", "mermaid-init.js", # mermaid
+    "theme/pagetoc.js"
+]
 
 #pagetoc
 additional-css = ["theme/pagetoc.css"]
-additional-js  = ["theme/pagetoc.js"]
 
 # open-on-gh
 git-repository-url = "https://github.com/KevinZonda/MLBook"
