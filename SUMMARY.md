@@ -65,5 +65,6 @@
   - [联合熵、条件熵、散度与互信息](./3-InformationTheory/2-CondEntropyAndD.md)
 
 - [学习理论](./7-LearningTheory/README.md)
+  - [PAC框架](./7-LearningTheory/PAC.md)
 
 [代码附录](./Code.md)
