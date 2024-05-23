@@ -20,12 +20,25 @@ jobs:
         cd ..
         mkdir dep
         cd dep
-        wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
-        wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
-        wget https://ftp.kevinzonda.com/dist/mdbook-mermaid%400.13.0-x64/mdbook-mermaid
-        wget https://ftp.kevinzonda.com/dist/mdbook-open-on-gh%402.4.3-x64/mdbook-open-on-gh
-        wget https://ftp.kevinzonda.com/dist/mdbook-pagetoc%400.2.0-x64/mdbook-pagetoc
-        wget https://ftp.kevinzonda.com/dist/mdbook-admonish%401.16.0-x64/mdbook-admonish
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook%400.4.37-x64/mdbook
+        wget -qO- https://github.com/rust-lang/mdBook/releases/download/v0.4.40/mdbook-v0.4.40-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook-katex%400.8.0-x64/mdbook-katex
+        wget -qO- https://github.com/lzanini/mdbook-katex/releases/download/0.9.0-binaries/mdbook-katex-v0.9.0-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook-mermaid%400.13.0-x64/mdbook-mermaid
+        wget -qO- https://github.com/badboy/mdbook-mermaid/releases/download/v0.13.0/mdbook-mermaid-v0.13.0-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook-open-on-gh%402.4.3-x64/mdbook-open-on-gh
+        wget -qO- https://github.com/badboy/mdbook-open-on-gh/releases/download/2.4.3/mdbook-open-on-gh-2.4.3-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook-pagetoc%400.2.0-x64/mdbook-pagetoc
+        wget -qO- https://github.com/slowsage/mdbook-pagetoc/releases/download/v0.2.0/mdbook-pagetoc-v0.2.0-aarch64-unknown-linux-gnu.tar.gz | tar xvz
+
+        # wget https://ftp.kevinzonda.com/dist/mdbook-admonish%401.16.0-x64/mdbook-admonish
+        wget -qO- https://github.com/tommilligan/mdbook-admonish/releases/download/v1.16.0/mdbook-admonish-v1.16.0-x86_64-unknown-linux-gnu.tar.gz | tar xvz
+
         chmod +x *
         echo "$(pwd)" >> $GITHUB_PATH
         cd ../MLBook
