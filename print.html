@@ -822,7 +822,7 @@ for (i := 0; i &lt; MAX_INTERATION; i++) {
 <p>支持向量机（Support Vector Machine, SVM）是一种二分类模型，其基本模型是定义在特征空间上的间隔最大的线性分类器，其学习策略便是间隔最大化。SVM 通过间隔最大化，可以使得模型对噪声更加鲁棒，从而提高模型的泛化能力。</p>
 <p>和逻辑回归一样，支持向量机是一个二分类模型，且其也是个线性模型，即其分割超平面为 <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9247em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathbf" style="margin-right:0.01597em;">w</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span></span></span></span><span class="mord mathbf">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">b</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。我们可以将数据集分为两类，一类为正类，一类为负类。</p>
 <blockquote>
-<p><strong>线性可分</strong>是指存在一个超平面可以将数据集完全分割开，即正类在超平面的一侧，负类在超平面的另一侧。</p>
+<p><strong>线性可分</strong>是指存在一个（超）平面可以将数据集完全分割开，即正类在（超）平面的一侧，负类在（超）平面的另一侧。</p>
 </blockquote>
 <p>在下面我们将首先讨论线性可分情况下的支持向量机。再介绍线性不可分的情况。</p>
 <h2 id="基础想法"><a class="header" href="#基础想法">基础想法</a></h2>
