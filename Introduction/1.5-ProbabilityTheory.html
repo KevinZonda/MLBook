@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>概率论 [WIP] - 机器学习书：以高中数学视角</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+        <link rel="stylesheet" href="../theme/mdbook-admonish.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">封面</a></li><li class="chapter-item expanded affix "><a href="../Notation.html">符号表</a></li><li class="chapter-item expanded "><a href="../Introduction/index.html"><strong aria-hidden="true">1.</strong> 机器学习基础</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Introduction/1.2-MathRecap.html"><strong aria-hidden="true">1.1.</strong> 高中数学回顾</a></li><li class="chapter-item expanded "><a href="../Introduction/1.3-LinearAlgebraBase.html"><strong aria-hidden="true">1.2.</strong> 向量和矩阵</a></li><li class="chapter-item expanded "><a href="../Introduction/1.4-PartialDerivative.html"><strong aria-hidden="true">1.3.</strong> 从导数到偏导数</a></li><li class="chapter-item expanded "><a href="../Introduction/1.5-ProbabilityTheory.html" class="active"><strong aria-hidden="true">1.4.</strong> 概率论 [WIP]</a></li><li class="chapter-item expanded "><a href="../Introduction/1.6-MLProblem.html"><strong aria-hidden="true">1.5.</strong> 机器学习问题定义</a></li><li class="chapter-item expanded "><a href="../Introduction/1.7-Kinds.html"><strong aria-hidden="true">1.6.</strong> 不同机器学习种类</a></li></ol></li><li class="chapter-item expanded "><a href="../Linear/index.html"><strong aria-hidden="true">2.</strong> 线性模型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Linear/2.1-LinearRegression.html"><strong aria-hidden="true">2.1.</strong> 线性回归</a></li><li class="chapter-item expanded "><a href="../Linear/2.2-GD.html"><strong aria-hidden="true">2.2.</strong> 梯度下降 GD</a></li><li class="chapter-item expanded "><a href="../Linear/2.3-LinearRegressionGD.html"><strong aria-hidden="true">2.3.</strong> 线性回归与梯度下降</a></li><li class="chapter-item expanded "><a href="../Linear/2.4-LogisticRegression.html"><strong aria-hidden="true">2.4.</strong> 逻辑回归</a></li><li class="chapter-item expanded "><a href="../Linear/2.5-NonLinearTransformation.html"><strong aria-hidden="true">2.5.</strong> 非线性变换</a></li><li class="chapter-item expanded "><a href="../Linear/2.6-SVM.html"><strong aria-hidden="true">2.6.</strong> 支持向量机 SVM [WIP]</a></li><li class="chapter-item expanded "><a href="../Linear/2.7-KernelTrick.html"><strong aria-hidden="true">2.7.</strong> 核技巧 Kernel Trick [WIP]</a></li><li class="chapter-item expanded "><a href="../Linear/2.8-SVR.html"><strong aria-hidden="true">2.8.</strong> 支持向回归 SVR [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../Practice/index.html"><strong aria-hidden="true">3.</strong> 机器学习实践</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Practice/GDVariants.html"><strong aria-hidden="true">3.1.</strong> 梯度下降的变种</a></li><li class="chapter-item expanded "><a href="../Practice/OverfitUnderfit.html"><strong aria-hidden="true">3.2.</strong> 过拟合和欠拟合</a></li><li class="chapter-item expanded "><a href="../Practice/Dataset.html"><strong aria-hidden="true">3.3.</strong> 数据集分割与验证</a></li><li class="chapter-item expanded "><a href="../Practice/Metrics.html"><strong aria-hidden="true">3.4.</strong> 评估指标</a></li></ol></li><li class="chapter-item expanded "><a href="../OldSchool/index.html"><strong aria-hidden="true">4.</strong> Old School [WIP]</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../OldSchool/CSP.html"><strong aria-hidden="true">4.1.</strong> 约束问题 CSP [WIP]</a></li><li class="chapter-item expanded "><a href="../OldSchool/BFS.html"><strong aria-hidden="true">4.2.</strong> 广度搜索 BFS [WIP]</a></li><li class="chapter-item expanded "><a href="../OldSchool/DFS.html"><strong aria-hidden="true">4.3.</strong> 深度搜索 DFS [WIP]</a></li><li class="chapter-item expanded "><a href="../OldSchool/AStar.html"><strong aria-hidden="true">4.4.</strong> A*算法 [WIP]</a></li><li class="chapter-item expanded "><a href="../OldSchool/Q-Learning.html"><strong aria-hidden="true">4.5.</strong> Q学习算法 [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../Continue-Pathway.html"><strong aria-hidden="true">5.</strong> 接下来的路径</a></li><li class="chapter-item expanded "><a href="../DeepLearning/index.html"><strong aria-hidden="true">6.</strong> 深度学习</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DeepLearning/4.1-Perceptron.html"><strong aria-hidden="true">6.1.</strong> 感知机</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.2-MLP.html"><strong aria-hidden="true">6.2.</strong> 多层感知机 MLP</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.3-BP.html"><strong aria-hidden="true">6.3.</strong> 计算图与反向传播</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.4-CNN.html"><strong aria-hidden="true">6.4.</strong> 卷积神经网络 CNN</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.x-AE.html"><strong aria-hidden="true">6.5.</strong> 自编码器 AE</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.x-VAE.html"><strong aria-hidden="true">6.6.</strong> 变分自编码器 VAE [WIP]</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.x-GAN.html"><strong aria-hidden="true">6.7.</strong> 生成对抗网络 GAN</a></li><li class="chapter-item expanded "><a href="../DeepLearning/4.x-SelfAttention.html"><strong aria-hidden="true">6.8.</strong> 自注意力机制与 Transformer [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../SequentialModel/index.html"><strong aria-hidden="true">7.</strong> 序列模型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SequentialModel/5.1-RNN.html"><strong aria-hidden="true">7.1.</strong> 循环神经网络 RNN</a></li><li class="chapter-item expanded "><a href="../SequentialModel/5.2-LSTM.html"><strong aria-hidden="true">7.2.</strong> 长短时记忆网络 LSTM</a></li><li class="chapter-item expanded "><a href="../SequentialModel/5.5-Transformer.html"><strong aria-hidden="true">7.3.</strong> Transformer [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../Clustering/index.html"><strong aria-hidden="true">8.</strong> 聚类算法</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Clustering/Hierarchical.html"><strong aria-hidden="true">8.1.</strong> 层次聚类</a></li><li class="chapter-item expanded "><a href="../Clustering/K-means.html"><strong aria-hidden="true">8.2.</strong> K均值聚类</a></li><li class="chapter-item expanded "><a href="../Clustering/kNN.html"><strong aria-hidden="true">8.3.</strong> K近邻 [WIP]</a></li><li class="chapter-item expanded "><a href="../Clustering/DBScan.html"><strong aria-hidden="true">8.4.</strong> DBScan [WIP]</a></li><li class="chapter-item expanded "><a href="../Clustering/GMM.html"><strong aria-hidden="true">8.5.</strong> 高斯混合模型 GMM [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../DataMining/index.html"><strong aria-hidden="true">9.</strong> 数据挖掘与数据分析 [WIP]</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DataMining/PCA.html"><strong aria-hidden="true">9.1.</strong> PCA [WIP]</a></li><li class="chapter-item expanded "><a href="../DataMining/SVD.html"><strong aria-hidden="true">9.2.</strong> SVD [WIP]</a></li><li class="chapter-item expanded "><a href="../DataMining/RandomForest.html"><strong aria-hidden="true">9.3.</strong> 随机森林 [WIP]</a></li></ol></li><li class="chapter-item expanded "><a href="../Optimisation/index.html"><strong aria-hidden="true">10.</strong> 优化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Optimisation/6.1-Convex.html"><strong aria-hidden="true">10.1.</strong> 凸函数</a></li></ol></li><li class="chapter-item expanded "><a href="../InformationTheory/index.html"><strong aria-hidden="true">11.</strong> 信息论</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../InformationTheory/1-InfoAndEntropy.html"><strong aria-hidden="true">11.1.</strong> 自信息与熵</a></li><li class="chapter-item expanded "><a href="../InformationTheory/2-CondEntropyAndD.html"><strong aria-hidden="true">11.2.</strong> 联合熵、条件熵、散度与互信息</a></li></ol></li><li class="chapter-item expanded "><a href="../LearningTheory/index.html"><strong aria-hidden="true">12.</strong> 学习理论</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../LearningTheory/PAC.html"><strong aria-hidden="true">12.1.</strong> PAC框架</a></li></ol></li><li class="chapter-item expanded "><a href="../Conclusion.html"><strong aria-hidden="true">13.</strong> 写在最后</a></li><li class="chapter-item expanded affix "><a href="../Code.html">代码附录</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">机器学习书：以高中数学视角</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/KevinZonda/MLBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="更多的数学概率"><a class="header" href="#更多的数学概率">更多的数学：概率</a></h1>
+<p>你可以暂时跳过这章，这可能涉及一点超出高中的表达，不过我们依然建议你尝试阅读和学习它。</p>
+<p>在未来遇到的时候，我们会再次提及这段知识。</p>
+<footer id="open-on-gh">找到了问题？<a href="https://github.com/KevinZonda/MLBook/edit/master/Introduction/1.5-ProbabilityTheory.md">在 GitHub 上编辑这个页面</a></footer>
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Introduction/1.4-PartialDerivative.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../Introduction/1.6-MLProblem.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Introduction/1.4-PartialDerivative.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../Introduction/1.6-MLProblem.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../mermaid.min.js"></script>
+        <script src="../mermaid-init.js"></script>
+        <script src="../theme/pagetoc.js"></script>
+
+
+    </div>
+    </body>
+</html>
