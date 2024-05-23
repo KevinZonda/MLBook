@@ -67,4 +67,6 @@
 - [学习理论](./7-LearningTheory/README.md)
   - [PAC框架](./7-LearningTheory/PAC.md)
 
+- [写在最后](./Conclusion.md)
+
 [代码附录](./Code.md)
