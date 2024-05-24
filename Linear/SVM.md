@@ -792,4 +792,75 @@ $$
 
 **选择** $\alpha$ ：最简单的做法是选择 $\alpha_i, \alpha_j\neq 0$ ，我们将在后面讨论具体应该怎么做
 
-优化 $\alpha$ ：
+**优化** $\alpha$​ ：
+
+由于我们固定了 $\alpha_i, \alpha_i$ 以外的所有参数，因此有
+
+
+$$
+\begin{align}
+\sum_{n=1}^N\alpha_ny_n &= 0\\
+\alpha_iy_i+\alpha_jy_j+\sum_{n\in[1, N]; n\neq i, j}\alpha_ny_n &=0\\
+\alpha_iy_i+\alpha_jy_j &= -\sum_{n\in[1, N]; n\neq i, j}\alpha_ny_n
+\end{align}
+$$
+如果令 $\zeta = -\sum_{n\in[1, N]; n\neq i, j}\alpha_ny_n$，则有：
+$$
+\alpha_iy_i+\alpha_jy_j=\zeta
+$$
+
+```warning title="符号"
+需要注意 $\zeta$ （zeta）和 $\xi$ （xi）并不是一个字母。  
+$\xi$ 表示松弛变量  
+$\zeta$ 表示一个常量
+```
+
+我们如果在更新 $\alpha_j$ ，我们可以计算其下界 $L$:
+
+这里我们将拆分两种情况：$y_i = y_j$ 和 $y_i \neq y_j$
+
+情况 $y_i=y_j$，我们有 $\alpha_i + \alpha_j=\zeta$ 或者 $-\alpha_i-\alpha_j =\zeta$
+$$
+\alpha_i + \alpha_j=\zeta \Rightarrow \alpha_j=\zeta-\alpha_i\\
+\begin{align}
+\because\quad& \alpha_i\in[0, C]\\
+&\alpha_j=\zeta-\alpha_i\\
+& C\geq 0\\
+\therefore\quad & \alpha_j\in[\zeta-C,\zeta]\\
+\therefore\quad & \alpha_j\in[\alpha_i+\alpha_j-C,\alpha_i+\alpha_j]\\
+\end{align}
+$$
+
+$$
+\alpha_i + \alpha_j=-\zeta \Rightarrow \alpha_j=-\zeta-\alpha_i\\
+\begin{align}
+\because\quad& \alpha_i\in[0, C]\\
+&\alpha_j=-\zeta-\alpha_i\\
+& C\geq 0\\
+\therefore\quad & \alpha_j\in[-\zeta-C,-\zeta]\\
+\therefore\quad & \alpha_j\in[\alpha_i+\alpha_j-C,\alpha_i+\alpha_j]\\
+\end{align}
+$$
+
+情况 $y_i\neq y_j$，我们有 $\alpha_i - \alpha_j=\zeta$ 或者 $-\alpha_i+\alpha_j =\zeta$
+$$
+\alpha_i - \alpha_j=\zeta \Rightarrow \alpha_j=\alpha_i-\zeta\\
+\begin{align}
+\because\quad& \alpha_i\in[0, C]\\
+&\alpha_j=\alpha_i-\zeta\\
+& C\geq 0\\
+\therefore\quad & \alpha_j\in[-\zeta,C-\zeta]\\
+\therefore\quad & \alpha_j\in[\alpha_j-\alpha_i,C+\alpha_j-\alpha_j]\\
+\end{align}
+$$
+
+$$
+-\alpha_i + \alpha_j=\zeta \Rightarrow \alpha_j=\alpha_i+\zeta\\
+\begin{align}
+\because\quad& \alpha_i\in[0, C]\\
+&\alpha_j=\alpha_i+\zeta\\
+& C\geq 0\\
+\therefore\quad & \alpha_j\in[\zeta,C+\zeta]\\
+\therefore\quad & \alpha_j\in[\alpha_j-\alpha_i,C+\alpha_j-\alpha_j]\\
+\end{align}
+$$
