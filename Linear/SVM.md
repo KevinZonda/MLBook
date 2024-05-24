@@ -739,6 +739,27 @@ s.t.\quad & \alpha_i\in[0, C]\\
 \end{align}
 $$
 
+即我们可以定义优化问题为：
+
+$$
+\begin{align}
+&\min_\alpha
+\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j) 
+- \sum_{n=1}^N\alpha_n
+\\
+s.t.\quad & \alpha_i\in[0, C]\\
+& \sum_{i=1}^N\alpha_iy_i = 0
+\end{align}
+$$
+
+而目标函数为：
+
+$$
+J=
+\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j) 
+- \sum_{n=1}^N\alpha_n
+$$
+
 
 ## SMO 算法
 
@@ -746,9 +767,9 @@ $$
 
 $$
 \begin{align}
-&\max_\alpha
-\sum_{n=1}^N\alpha_n
--\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
+&\min_\alpha
+\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j) 
+- \sum_{n=1}^N\alpha_n
 \\
 s.t.\quad & \alpha_i\in[0, C]\\
 & \sum_{i=1}^N\alpha_iy_i = 0
@@ -874,6 +895,35 @@ $$
 \begin{align}
 \alpha_iy_i+\alpha_jy_j&=\zeta\\
 \alpha_iy_i&=\zeta-\alpha_jy_j\\
-\alpha_i &= \frac{\zeta-\alpha_jy_j}{\alpha_i}
+\alpha_i &= \frac{\zeta-\alpha_jy_j}{y_i}
+\end{align}
+$$
+
+
+我们对目标函数相对于特定 $\alpha_k$ 进行求导（这里使用 $\alpha_k$ 是为了避免和目标函数中的 $\alpha_i$ 重合）：
+
+$$
+\begin{align}
+\frac{\partial J}{\partial \alpha_k} &=
+\frac{\partial}{\partial \alpha_k}
+\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j) 
+- \sum_{n=1}^N\alpha_n
+
+\\
+&= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\end{align}
+$$
+
+我们可以将 $\alpha_i$ 代入：
+
+$$
+
+\begin{align}
+\frac{\partial J}{\partial \alpha_k}
+&= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\\
+&= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\\
+&=0
 \end{align}
 $$
