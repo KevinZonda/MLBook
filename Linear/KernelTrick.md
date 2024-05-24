@@ -57,4 +57,15 @@ $$
 
 ## 组合核 Compositional Kernels
 
-TODO
+如果我们有两个核函数 $\kappa_1$ 和 $\kappa_2$，我们可以通过以下方式构建新的核函数：
+
+$$
+\begin{align}
+\kappa(\mathbf{x}, \mathbf{z}) &= c \cdot \kappa_1(\mathbf{x}, \mathbf{z}) & \text{其中 } c\geq 0 \text{ 是常量}\\
+\kappa(\mathbf{x}, \mathbf{z}) &= \kappa_1(\mathbf{x}, \mathbf{z}) + \kappa_2(\mathbf{x}, \mathbf{z}) & \\
+\kappa(\mathbf{x}, \mathbf{z}) &= \kappa_1(\mathbf{x}, \mathbf{z}) \cdot \kappa_2(\mathbf{x}, \mathbf{z}) & \\
+\kappa(\mathbf{x}, \mathbf{z}) &= e^{\kappa_1(\mathbf{x}, \mathbf{z})} &\\
+\kappa(\mathbf{x}, \mathbf{z}) &= f(\mathbf{x}) \cdot \kappa_1(\mathbf{x}, \mathbf{z}) \cdot f(\mathbf{z}) & \text{其中 } f \text{ 是任意函数}\\
+\kappa(\mathbf{x}, \mathbf{z}) &= q(\kappa_1(\mathbf{x}, \mathbf{z})) & \text{其中 } q \text{ 是任意非负系数多项式}
+\end{align}
+$$
