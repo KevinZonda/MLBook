@@ -760,7 +760,7 @@ $$
 
 这个算法的核心想法是每一步，从 $\alpha$ 中选择两个 $\alpha_i$、$\alpha_j$ 并让其他 $\alpha$ 固定，然后调整这两个参数。通过反复循环这个操作，完成整体优化。
 
-```admonish title="为什么不直接选择一个$\alpha_i$进行优化"
+```admonish title="为什么不直接选择一个进行优化"
 考虑是如果我们抽取一个 $\alpha_k$，而其仍需要满足约束 $\sum_{i=1}^N\alpha_iy_i = 0$，因此则有：
 $$
 \begin{align}
