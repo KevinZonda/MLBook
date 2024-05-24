@@ -742,5 +742,43 @@ $$
 
 ## SMO 算法
 
+通过上述过程，我们获得了我们需要优化的问题：
 
+$$
+\begin{align}
+&\max_\alpha
+\sum_{n=1}^N\alpha_n
+-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
+\\
+s.t.\quad & \alpha_i\in[0, C]\\
+& \sum_{i=1}^N\alpha_iy_i = 0
+\end{align}
+$$
+上述问题我们定义其为二次编程（QP）问题。SMO 是一个启发式算法，其将这个问题分解成很多子 QP 问题再逐个解决分析。
 
+我们的目标是通过选择 $\alpha$ 从而使这个问题最优化。
+
+这个算法的核心想法是每一步，从 $\alpha$ 中选择两个 $\alpha_i$、$\alpha_j$ 并让其他 $\alpha$ 固定，然后调整这两个参数。通过反复循环这个操作，完成整体优化。
+
+```admonish note title="为什么我们不直接选择一个 $\alpha_i$ 进行优化呢？"
+考虑是如果我们抽取一个 $\alpha_k$，而其仍需要满足约束 $\sum_{i=1}^N\alpha_iy_i = 0$，因此则有：
+$$
+\begin{align}
+\alpha_ky_k+\sum_{i\in [0, N], i\neq k}\alpha_iy_i&=0
+\\
+\alpha_ky_k&= -\sum_{i\in [0, N], i\neq k}\alpha_iy_i
+\\
+\alpha_k &=-\frac{1}{y_k}\sum_{i\in [0, N], i\neq k}\alpha_iy_i
+\end{align}
+$$
+而考虑 $y_k=\{-1, 1\} = \frac{1}{y_k}$，因此有
+$$
+\begin{align}
+\alpha_k &=-\frac{1}{y_k}\sum_{i\in [0, N], i\neq k}\alpha_iy_i\\
+&=-{y_k}\sum_{i\in [0, N], i\neq k}\alpha_iy_i
+\end{align}
+$$
+而对于这种情况，调整 $\alpha_k$  是难以完成。
+
+因此我们最少选择两个参数。
+```
