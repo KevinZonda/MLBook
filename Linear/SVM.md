@@ -911,19 +911,23 @@ $$
 
 \\
 &= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\\
+&=0
 \end{align}
 $$
 
-我们可以将 $\alpha_i$ 代入：
 
 $$
 
 \begin{align}
-\frac{\partial J}{\partial \alpha_k}
-&= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+&=0\\
+\sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) &= 1
 \\
-&= \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
+\alpha_ky_k^2\kappa(\mathbf{x}_k,\mathbf{x}_k) + \sum_{i\neq k}\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) &= 1
 \\
-&=0
+\alpha_k\kappa(\mathbf{x}_k,\mathbf{x}_k) &= 1 -  \sum_{i\neq k}\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k)
+\\
+\alpha_k &= \frac{1 -  \sum_{i\neq k}\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k)}{\kappa(\mathbf{x}_k,\mathbf{x}_k)}
 \end{align}
 $$
