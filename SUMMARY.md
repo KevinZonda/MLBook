@@ -17,7 +17,7 @@
   - [逻辑回归](./Linear/LogisticRegression.md)
   - [非线性变换](./Linear/NonLinearTransformation.md)
   - [支持向量机 SVM [WIP]](./Linear/SVM.md)
-  - [核技巧 Kernel Trick [WIP]](./Linear/KernelTrick.md)
+  - [核技巧 Kernel Trick](./Linear/KernelTrick.md)
   - [支持向回归 SVR [WIP]](./Linear/SVR.md)
 - [机器学习实践](./Practice/README.md)
   - [梯度下降的变种](./Practice/GDVariants.md)
