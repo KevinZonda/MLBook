@@ -387,15 +387,16 @@
 </div>
 <div>
 <p>Failed with:</p>
-<pre><code class="language-log">TOML parsing error: TOML parse error at line 1, column 6
+<pre><code class="language-log">TOML parsing error: TOML parse error at line 1, column 22
   |
-1 | note 
-  |      ^
-expected `.`, `=`
+1 | title="为什么不直接选择一个 $\alpha_i$ 进行优化"
+  |                      ^
+invalid escape sequence
+expected `b`, `f`, `n`, `r`, `t`, `u`, `U`, `\`, `"`
 
 </code></pre>
 <p>Original markdown input:</p>
-<pre><code class="language-markdown">```admonish note title="为什么我们不直接选择一个 $\alpha_i$ 进行优化呢？"
+<pre><code class="language-markdown">```admonish title="为什么不直接选择一个 $\alpha_i$ 进行优化"
 考虑是如果我们抽取一个 $\alpha_k$，而其仍需要满足约束 $\sum_{i=1}^N\alpha_iy_i = 0$，因此则有：
 $$
 \begin{align}
