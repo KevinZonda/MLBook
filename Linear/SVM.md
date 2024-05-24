@@ -492,7 +492,252 @@ $$
 $$
 
 
-## 软间隔 Soft Margin：非线性可分情况
+## 软间隔 Soft Margin
+
+但是如果遇到非线性可分情况，我们需要引入软间隔（Soft Margin）。我们可以引入一个松弛变量 $\xi_n$，其可以使得一些点可以在越过边界的情况下被正确分类。我们可以定义新的约束条件：
+
+$$
+\begin{align}
+\forall \quad &n\in\{1, 2, ..., N\}.\\
+&y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)\geq1-\xi_n\\
+&\xi_n\geq0
+\end{align}
+$$
+
+即
+
+$$
+\begin{align}
+\forall \quad & n \in [1, N].\\
+&y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)+\xi_n\geq1 \quad (\xi_n\geq0)\\
+\end{align}
+$$
+
+而其实我们本质期望这个松弛变量 $\xi_n$ 越小越好，因此我们可以定义惩罚函数 $g_{\xi}$ 为：
+
+$$
+\begin{align}
+g_{\xi}=C\sum_{n=1}^N\xi_n
+\end{align}
+$$
+
+其中 $C$ 为一个超参数（hyperparameter），其可以控制惩罚的大小。我们可以把原问题改写为：
+
+$$
+\begin{align}
+&\argmin_{\mathbf{w}, b, \xi}\left\{\frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n\right\}\\
+s.t. \quad
+&\forall n\in[1, N].\\
+&y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)+\xi_n\geq1\\
+&\xi_n\geq0
+\end{align}
+$$
+
+```admonish note title="什么是超参数"
+超参数是在开始学习过程之前设置的参数，其控制或影响学习的过程。在学习过程中，超参数是固定的，不会被学习和改变。超参数的选择是非常重要的，不同的超参数会导致不同的学习效果。
+```
+
+我们可以将问题逐步改写为对偶问题以方便求解：
+
+$$
+\begin{align}
+&\argmin_{\mathbf{w}, b, \xi}\left\{\frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n\right\}\\
+s.t. \quad
+&\forall n\in[1, N].\\
+&1 - \xi_n - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)\leq 0\\
+&-\xi_n\leq0
+\end{align}
+$$
+
+改写为拉格朗日乘子法为：
+
+
+$$
+\begin{align}
+\mathcal{L} &= \frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n
+- \sum_{n=1}^N\beta_n\xi_n + \sum_{n=1}^N\alpha_n[1 - \xi_n - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+\text{where}\quad & \alpha_n \geq 0\\
+& \beta_n\geq 0
+\end{align}
+$$
+和线性可分情况类似（即没有软间隔的情况，也被称为硬间隔），我们的优化问题因此被转化为：
+$$
+\begin{align}
+&\max_\alpha \min_{\mathbf{w}, b} \mathcal{L}   & & \min_{\mathbf{w}, b}\max_\alpha  \mathcal{L}
+\\
+\text{where}\quad & \alpha_n \geq 0 & \text{where}  \quad& \alpha_n \geq 0\\
+& \beta_n\geq 0 &  & \beta_n\geq 0\\
+& y_n(\mathbf{w}^T\mathbf{x}_n)\geq 1 + \xi_n & & y_n(\mathbf{w}^T\mathbf{x}_n)\geq 1+ \xi_n
+\end{align}
+$$
+上述两个问题是等价的（Minimax Theorem）。
+
+
+
+而如果我们对此拉格朗日乘子法取最低点，即为
+$$
+\begin{matrix}
+\frac{\partial \mathcal{L}}{\partial \mathbf{w}} = 0
+&\Rightarrow&
+\mathbf{w} - \sum_{n=1}^N \alpha_n y_n \phi(\mathbf{x}_n) = 0
+&\Rightarrow&
+\mathbf{w} = \sum_{n=1}^N \alpha_n y_n \phi(\mathbf{x}_n)
+\\
+
+\frac{\partial \mathcal{L}}{\partial \xi_n} = 0
+&\Rightarrow&
+C-\beta_n-\alpha_n = 0
+&\Rightarrow&
+\alpha_n+\beta_n=C
+\\
+
+
+\frac{\partial \mathcal{L}}{\partial b} = 0
+&\Rightarrow&
+-\sum_{n=1}^N \alpha_n y_n = 0
+&\Rightarrow&
+\sum_{n=1}^N \alpha_n y_n = 0
+\end{matrix}
+$$
+
+
+其中 $\alpha_n+\beta_n=C$ 可以改写为 $\alpha_n=C-\beta_n$，考虑 $\beta_n \geq 0$
+
+因此则有 $\alpha_n\in[0, C]$。我们称这一条限制为 **Box Constraint**。
+
+$$
+\begin{align}
+\mathcal{L} &= \frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n
+- \sum_{n=1}^N\beta_n\xi_n + \sum_{n=1}^N\alpha_n[1 - \xi_n - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n
+- \sum_{n=1}^N\beta_n\xi_n -\sum_{n=1}^N\alpha_n\xi_n + \sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n
+- \sum_{n=1}^N(\alpha_n+\beta_n)\xi_n+ \sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+\because & \quad \alpha_n+\beta_n=C
+\\
+\therefore &=\frac{1}{2}|| \mathbf{w} ||^2+C\sum_{n=1}^N\xi_n
+- \sum_{n=1}^NC\xi_n+ \sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+ \sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n)+b)]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+ \sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n))-y_nb]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+
+\sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n))]
+-\sum_{n=1}^N\alpha_ny_nb
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+
+\sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n))]
+-b\sum_{n=1}^N\alpha_ny_n
+\\
+\because&\quad \sum_{n=1}^N \alpha_n y_n = 0
+\\
+\therefore &=\frac{1}{2}|| \mathbf{w} ||^2+
+\sum_{n=1}^N\alpha_n[1 - y_n(\mathbf{w}^T\phi(\mathbf{x}_n))]
+\\
+&=\frac{1}{2}|| \mathbf{w} ||^2+
+\sum_{n=1}^N\alpha_n-\sum_{n=1}^N \alpha_n y_n\mathbf{w}^T\phi(\mathbf{x}_n)
+\end{align}
+$$
+
+因此这个公式可以被拆成三部分：
+
+- $\frac{1}{2}|| \mathbf{w} ||^2$​
+- $\sum_{n=1}^N\alpha_n$
+- $-\sum_{n=1}^N \alpha_n y_n\mathbf{w}^T\phi(\mathbf{x}_n)$​
+
+我们对第一项进行修改
+$$
+\begin{align}
+ &\frac{1}{2}|| \mathbf{w} ||^2 = \frac{1}{2} \mathbf{w}^T\mathbf{w}
+\\
+\because \quad & \mathbf{w} = \sum_{n=1}^N \alpha_n y_n \phi(\mathbf{x}_n)
+\\
+\therefore \quad & \frac{1}{2}|| \mathbf{w} ||^2 = \frac{1}{2} 
+\left( \sum_{i=1}^N \alpha_i y_i \phi(\mathbf{x}_i) \right)^T
+\left( \sum_{j=1}^N \alpha_j y_j \phi(\mathbf{x}_j) \right)
+\end{align}
+$$
+
+$$
+\begin{align}
+\frac{1}{2}|| \mathbf{w} ||^2 &= \frac{1}{2} 
+\left( \sum_{i=1}^N \alpha_i y_i \phi(\mathbf{x}_i) \right)^T
+\left( \sum_{j=1}^N \alpha_j y_j \phi(\mathbf{x}_j) \right)
+\\
+&= \frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \phi(\mathbf{x}_i)^T\phi(\mathbf{x}_j)
+\\
+&=\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
+
+\end{align}
+$$
+
+
+
+我们对第三项进行修改
+$$
+\begin{align}
+-\sum_{n=1}^N \alpha_n y_n\mathbf{w}^T\phi(\mathbf{x}_n)
+&= -\sum_{n=1}^N \alpha_n y_n
+\left( \sum_{j=1}^N \alpha_j y_j \phi(\mathbf{x}_j) \right)
+^T\phi(\mathbf{x}_n)\\
+&= -\sum_{i=1}^N \alpha_i y_i
+\left( \sum_{j=1}^N \alpha_j y_j \phi(\mathbf{x}_j) \right)
+^T\phi(\mathbf{x}_i)
+\\
+&= -\sum_{i=1}^N \alpha_i y_i
+\left( \sum_{j=1}^N \alpha_j y_j \phi(\mathbf{x}_j)^T\phi(\mathbf{x}_i) \right)
+\\
+&= -\sum_{i=1}^N \alpha_i y_i
+\left( \sum_{j=1}^N \alpha_j y_j \kappa(\mathbf{x}_j, \mathbf{x}_i) \right)
+\\
+&= -\sum_{i=1}^N\sum_{j=1}^N \alpha_i y_i
+\alpha_j y_j \kappa(\mathbf{x}_j, \mathbf{x}_i)
+\\
+&= -\sum_{i=1}^N\sum_{j=1}^N \alpha_i \alpha_j y_i
+y_j \kappa(\mathbf{x}_i, \mathbf{x}_j)
+\end{align}
+$$
+将改写好的量带入：
+$$
+\begin{align}
+\mathcal{L}&=\frac{1}{2}|| \mathbf{w} ||^2+
+\sum_{n=1}^N\alpha_n-\sum_{n=1}^N \alpha_n y_n\mathbf{w}^T\phi(\mathbf{x}_n)
+\\
+&=
+\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
++\sum_{n=1}^N\alpha_n
+-\sum_{i=1}^N\sum_{j=1}^N \alpha_i \alpha_j y_i y_j \kappa(\mathbf{x}_i, \mathbf{x}_j)\\
+&=\sum_{n=1}^N\alpha_n
+-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
+\end{align}
+$$
+而我们的目标为最大化 $\mathcal{L}$，即
+$$
+\begin{align}
+&\max_\alpha \mathcal{L}(\alpha)
+\\
+s.t.\quad & 0 \leq \alpha_i \leq C\\
+& \sum_{i=1}^N\alpha_iy_i = 0
+\end{align}
+$$
+更完整地
+
+
+$$
+\begin{align}
+&\max_\alpha
+\sum_{n=1}^N\alpha_n
+-\frac{1}{2}\sum_{i=1}^N\sum_{j=1}^N\alpha_i\alpha_j y_i y_j \kappa(\mathbf{x}_i,\mathbf{x}_j)
+\\
+s.t.\quad & \alpha_i\in[0, C]\\
+& \sum_{i=1}^N\alpha_iy_i = 0
+\end{align}
+$$
 
 
 ## SMO 算法
