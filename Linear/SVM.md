@@ -842,6 +842,8 @@ $$
 \end{align}
 $$
 
+因此此情况下界 $L=\max(0, \alpha_i+\alpha_j-C)$ ，上界 $H=\min(C, \alpha_i+\alpha_j)$
+
 情况 $y_i\neq y_j$，我们有 $\alpha_i - \alpha_j=\zeta$ 或者 $-\alpha_i+\alpha_j =\zeta$
 $$
 \alpha_i - \alpha_j=\zeta \Rightarrow \alpha_j=\alpha_i-\zeta\\
@@ -862,5 +864,16 @@ $$
 & C\geq 0\\
 \therefore\quad & \alpha_j\in[\zeta,C+\zeta]\\
 \therefore\quad & \alpha_j\in[\alpha_j-\alpha_i,C+\alpha_j-\alpha_j]\\
+\end{align}
+$$
+
+因此此情况下界 $L=\max(0, \alpha_j-\alpha_i)$ ，上界 $H=\min(C, C+\alpha_j-\alpha_i)$
+
+我们可以改写 $\alpha_i$ 使用 $\alpha_j$ 表示：
+$$
+\begin{align}
+\alpha_iy_i+\alpha_jy_j&=\zeta\\
+\alpha_iy_i&=\zeta-\alpha_jy_j\\
+\alpha_i &= \frac{\zeta-\alpha_jy_j}{\alpha_i}
 \end{align}
 $$
