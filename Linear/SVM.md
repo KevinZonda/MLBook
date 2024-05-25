@@ -406,7 +406,7 @@ s.t. \quad
 \end{align}
 $$
 
-### 求解对偶问题
+### 改写对偶问题
 
 我们对其进行求导，即
 
@@ -918,7 +918,6 @@ $$
 
 
 $$
-
 \begin{align}
 \sum_{i=1}^N\alpha_i y_i y_k \kappa(\mathbf{x}_i,\mathbf{x}_k) - 1
 &=0\\
