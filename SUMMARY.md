@@ -35,6 +35,8 @@
   - [感知机](./DeepLearning/Perceptron.md)
   - [多层感知机 MLP](./DeepLearning/MLP.md)
   - [计算图与反向传播](./DeepLearning/BP.md)
+  - [多分类与 Softmax](./DeepLearning/Softmax.md)
+  - [层 Layer](./DeepLearning/Layers.md)
   - [卷积神经网络 CNN](./DeepLearning/CNN.md)
   - [自编码器 AE](./DeepLearning/AE.md)
   - [变分自编码器 VAE [WIP]](./DeepLearning/VAE.md)
