@@ -39,7 +39,25 @@ $$
 
 ## 导数
 
-导数使用 $f'(x)$表达，导数的函数值就是函数图像在这一点的切线斜率。对于一元函数，也就是微分和微元的比值，用符号语言表达就是 $f'(x)=\frac{df(x)}{dx}$。二阶导数表达为 $f''(x)$或 $\frac{d}{dx}\frac{df(x)}{dx}$，也就是导数的导数。
+导数使用 $f'(x)$表达，导数的函数值就是函数图像在这一点的切线斜率。对于一元函数，也就是微分和微元的比值，用符号语言表达就是 $f'(x)=\frac{df(x)}{dx} = \frac{d}{dx} f(x)$。二阶导数表达为 $f''(x)$或 $\frac{d}{dx}\frac{df(x)}{dx}$，也就是导数的导数。
+
+在本书中，我们更倾向于使用 $\frac{d}{dx} f$ 的表示方法，因为其和偏导 $\frac{\partial }{\partial x} f$ 的定义更加接近。我们会在后面讨论多元函数的时候再详细讨论偏导是什么。
+
+导数的基础公式：
+
+导数的定义：$f'(x) = \lim_{\Delta x\to 0} \frac{f(x+\Delta x) - f(x)}{\Delta x}$
+
+常数导数：$\frac{d}{dx} c = (c)' = 0$
+
+幂函数导数：$\frac{d}{dx} x^n = (x^n)' = nx^{n-1}$
+
+指数函数导数：$\frac{d}{dx} e^x = (e^x)' = e^x$
+
+自然对数导数：$\frac{d}{dx} \ln x = (\ln x)' = \frac{1}{x}$
+
+对数函数导数：$\frac{d}{dx} \log_a x = (\log_a x)' = \frac{1}{x\ln a}$
+
+链式法则：$\frac{d}{dx} f(g(x)) = \frac{d f(g(x))}{d g(x)}\frac{d g(x)}{d x}$ 或 $(f(g(x)))' = f'(g(x))g'(x)$
 
 ## 对数
 
