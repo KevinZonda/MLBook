@@ -6,6 +6,7 @@
 - [机器学习基础](./Introduction/README.md)
   - [高中数学回顾](./Introduction/MathRecap.md)
   - [向量和矩阵](./Introduction/LinearAlgebraBase.md)
+  - [另一个视角看矩阵](./Introduction/LinearAlgebraAnotherView.md)
   - [从导数到偏导数](./Introduction/PartialDerivative.md)
   - [概率论 [WIP]](./Introduction/ProbabilityTheory.md)
   - [机器学习问题定义](./Introduction/MLProblem.md)
