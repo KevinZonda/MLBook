@@ -13,7 +13,7 @@ $$
 
 $$
 \nabla J=
-\mathbb{E}_{\mathbf{w}\in \mathcal{X}}\nabla{J_{\mathbf{w}}(\mathbf{x})}
+\mathbb{E}_{\mathbf{x}\in \mathcal{X}}\nabla{J_{\mathbf{w}}(\mathbf{x})}
 =
 \frac{1}{N}\sum^N_{i=1}\nabla{J_{\mathbf{w}}(\mathbf{x}_i)}
 $$
