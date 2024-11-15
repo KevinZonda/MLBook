@@ -1,5 +1,10 @@
 # 卷积神经网络 CNN
 
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
+![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
+![CV](https://img.shields.io/badge/LH-Computer%20Vision-red)
+
+
 卷积（Convolution）、填充（Padding）、步长(Stride)
 
 ## 卷积层 Convolutional Layer
