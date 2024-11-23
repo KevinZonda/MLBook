@@ -1,4 +1,5 @@
-# 机器学习书：以高中数学视角
+![](assets/cover.png)
+
 
 ```admonish warning title=""
 项目还在早期阶段，内容目前还不完整且没有经过完整检查与审核，可能存在错误。可能包含部分私有内容，如有侵权请联系作者。  
@@ -7,13 +8,6 @@
 ```admonish info title=""
 本内容可以在 [mlbook.dev](https://mlbook.dev/) 与 [GitHub](https://github.com/KevinZonda/MLBook) 获取。
 ```
-
-```admonish info title=""
-谨以此书，献给我的大学三年。  
-by KevinZonda
-```
-
-![](assets/cover.png)
 
 而在这里将更关注于机器学习中基础的数学和理论。相信学完，你可以获得对机器学习有基础理解。当然，在这个模块中，读者并不期望拥有高深的数学知识，只期望你能够理解以及能够运用高中数学知识。
 

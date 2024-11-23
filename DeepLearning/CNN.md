@@ -1,5 +1,10 @@
 # 卷积神经网络 CNN
 
+![AI2](https://img.shields.io/badge/LI-Artificial%20Inteligence%202-green)
+![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
+![CV](https://img.shields.io/badge/LH-Computer%20Vision-red)
+
+
 卷积（Convolution）、填充（Padding）、步长(Stride)
 
 ## 卷积层 Convolutional Layer
@@ -22,3 +27,5 @@ stride或者说步长表示这个过滤器每次移动几格。
 
 
 需要大量配图
+
+> CNN 不具备旋转不变性 也不具备 尺度不变性

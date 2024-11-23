@@ -3,9 +3,9 @@
 ![NC](https://img.shields.io/badge/LH-Neural%20Compulation-red)
 ![ML](https://img.shields.io/badge/LH-Machine%20Learning-red)
 
-在学完线性回归和逻辑回归后你一定会有一个疑问，我们既然定义模型为线性函数，而线性函数中所有的输入特征都是线性的，那么我们如何处理非线性的特征呢？例如我们应该如何用线性模型来拟合一个二次函数呢？
+在学完线性回归和逻辑回归后你一定会有一个疑问，我们既然定义模型为线性函数，即我们只能拟合线性的情况，例如我们进行分类任务时，只能处理线性可分的情况。那如果遇到数据不能被线性函数分割，我们该如何处理呢？例如我们应该如何用线性模型来拟合一个二次函数呢？
 
-非线性变换可以解决这个问题。
+非线性变换 Nonlinear Transformation 可以解决这个问题。
 
 ## 定义
 
@@ -27,7 +27,8 @@ $$
 ## 代价
 
 ```admonish success title=""
-We take the benefit, we pay the price.
+We take the benefit, we pay the price.  
+我们享受了好处，我们也需要付出代价。
 ```
 
 非线性变化允许我们拟合更多的函数，但是也有一些代价。

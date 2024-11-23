@@ -18,6 +18,21 @@ TODO
 
 ## 激活函数
 
+## 实践上的差异
+
+尽管我们可以一个一个分别实现每个感知机和其输出层之间的连接（和权重），但是实际上我们通常使用矩阵运算来实现。
+
+考虑层输入参数为 $x_1, x_2, \cdots, x_m$，其输出为 $y_1, y_2, \cdots, y_n$。那么我们可以制作权重矩阵 $W_{m \times n}$，偏置矩阵 $b_{n\times 1}$，即 `W : (n_feature, n_output), b : (n_output,)`。
+
+考虑输入矩阵 `X : (n_sample, n_feature)`，其输出矩阵 `Y : (n_sample, n_output)`。那么我们可以通过矩阵运算来计算输出矩阵。
+
+$$
+Y = XW + b
+$$
+
+其矩阵形状的变化可以被描述为 `(n_sample, n_feature) x (n_feature, n_output) + (n_feature,) -> (n_sample, n_output)`。
+
+
 ## 优化
 
 如果我们把原图中的输出当作预测值，最直觉的方法我们可以通过计算预测值和真实值的差距来优化网络。我们可以通过梯度下降来优化网络。
